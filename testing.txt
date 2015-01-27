@@ -1,3 +1,0 @@
-Add Business Log
-
-int Class {}
