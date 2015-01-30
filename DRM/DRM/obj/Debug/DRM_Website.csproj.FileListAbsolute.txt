@@ -81,6 +81,5 @@ C:\GitHub\DRM\DRM\DRM\bin\ko\System.Spatial.resources.dll
 C:\GitHub\DRM\DRM\DRM\bin\ru\System.Spatial.resources.dll
 C:\GitHub\DRM\DRM\DRM\bin\zh-Hans\System.Spatial.resources.dll
 C:\GitHub\DRM\DRM\DRM\bin\zh-Hant\System.Spatial.resources.dll
-C:\GitHub\DRM\DRM\DRM\obj\Debug\DRM_Website.csprojResolveAssemblyReference.cache
 C:\GitHub\DRM\DRM\DRM\obj\Debug\DRM.dll
 C:\GitHub\DRM\DRM\DRM\obj\Debug\DRM.pdb

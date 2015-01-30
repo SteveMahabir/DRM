@@ -25,5 +25,6 @@ namespace DRM_Models
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Child> Children { get; set; }
     }
 }

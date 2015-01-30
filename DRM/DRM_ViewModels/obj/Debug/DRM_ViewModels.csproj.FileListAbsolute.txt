@@ -1,0 +1,5 @@
+C:\GitHub\DRM\DRM\DRM_ViewModels\bin\Debug\DRM_ViewModels.dll
+C:\GitHub\DRM\DRM\DRM_ViewModels\bin\Debug\DRM_ViewModels.pdb
+C:\GitHub\DRM\DRM\DRM_ViewModels\obj\Debug\DRM_ViewModels.csprojResolveAssemblyReference.cache
+C:\GitHub\DRM\DRM\DRM_ViewModels\obj\Debug\DRM_ViewModels.dll
+C:\GitHub\DRM\DRM\DRM_ViewModels\obj\Debug\DRM_ViewModels.pdb
