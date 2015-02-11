@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="DatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Child">
           <Key>
             <PropertyRef Name="Id" />
@@ -20,6 +20,7 @@
           <Property Name="DocName" Type="nchar" MaxLength="50" />
           <Property Name="DocPhone" Type="nchar" MaxLength="10" />
           <Property Name="Comments" Type="text" />
+          <Property Name="ParentId" Type="int" />
         </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'C:\GITHUB\DRM\DRM\DATABASE\DATABASE.MDF.dbo.ChildClass' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -72,23 +73,134 @@ warning 6002: The table/view 'C:\GITHUB\DRM\DRM\DATABASE\DATABASE.MDF.dbo.ChildC
           <Property Name="Password" Type="nvarchar" MaxLength="128" />
           <Property Name="Email" Type="nvarchar" MaxLength="50" />
         </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <Association Name="FK_Child_Parent">
+          <End Role="Parent" Type="Self.Parent" Multiplicity="0..1" />
+          <End Role="Child" Type="Self.Child" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Parent">
+              <PropertyRef Name="ParentId" />
+            </Principal>
+            <Dependent Role="Child">
+              <PropertyRef Name="ParentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ChildClass_Child">
+          <End Role="Child" Type="Self.Child" Multiplicity="1" />
+          <End Role="ChildClass" Type="Self.ChildClass" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Child">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ChildClass">
+              <PropertyRef Name="ChildId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ChildClass_Class">
+          <End Role="Class" Type="Self.Class" Multiplicity="1" />
+          <End Role="ChildClass" Type="Self.ChildClass" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Class">
+              <PropertyRef Name="ClassId" />
+            </Principal>
+            <Dependent Role="ChildClass">
+              <PropertyRef Name="ClassId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Class_Employee">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+          <End Role="Class" Type="Self.Class" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="EmployeeId" />
+            </Principal>
+            <Dependent Role="Class">
+              <PropertyRef Name="EmployeeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_GetChild" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_GetChildClass" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_GetClass" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_GetEmployee" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_GetParent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="DatabaseModelStoreContainer">
           <EntitySet Name="Child" EntityType="Self.Child" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Class" EntityType="Self.Class" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Parent" EntityType="Self.Parent" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ChildClass" EntityType="Self.ChildClass" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [ChildClass].[ChildId] AS [ChildId], 
     [ChildClass].[ClassId] AS [ClassId]
     FROM [dbo].[ChildClass] AS [ChildClass]</DefiningQuery>
           </EntitySet>
+          <AssociationSet Name="FK_Child_Parent" Association="Self.FK_Child_Parent">
+            <End Role="Parent" EntitySet="Parent" />
+            <End Role="Child" EntitySet="Child" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ChildClass_Child" Association="Self.FK_ChildClass_Child">
+            <End Role="Child" EntitySet="Child" />
+            <End Role="ChildClass" EntitySet="ChildClass" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ChildClass_Class" Association="Self.FK_ChildClass_Class">
+            <End Role="Class" EntitySet="Class" />
+            <End Role="ChildClass" EntitySet="ChildClass" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Class_Employee" Association="Self.FK_Class_Employee">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="Class" EntitySet="Class" />
+          </AssociationSet>
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="DatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="DatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Child">
           <Key>
             <PropertyRef Name="Id" />
@@ -104,6 +216,9 @@ warning 6002: The table/view 'C:\GITHUB\DRM\DRM\DATABASE\DATABASE.MDF.dbo.ChildC
           <Property Name="DocName" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
           <Property Name="DocPhone" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ParentId" Type="Int32" />
+          <NavigationProperty Name="Parent" Relationship="Self.FK_Child_Parent" FromRole="Child" ToRole="Parent" />
+          <NavigationProperty Name="Classes" Relationship="Self.ChildClass" FromRole="Child" ToRole="Class" />
         </EntityType>
         <EntityType Name="Class">
           <Key>
@@ -114,6 +229,8 @@ warning 6002: The table/view 'C:\GITHUB\DRM\DRM\DATABASE\DATABASE.MDF.dbo.ChildC
           <Property Name="Capacity" Type="Int32" />
           <Property Name="CStartEnd" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
           <Property Name="EmployeeId" Type="Int32" />
+          <NavigationProperty Name="Employee" Relationship="Self.FK_Class_Employee" FromRole="Class" ToRole="Employee" />
+          <NavigationProperty Name="Children" Relationship="Self.ChildClass" FromRole="Class" ToRole="Child" />
         </EntityType>
         <EntityType Name="Employee">
           <Key>
@@ -130,6 +247,7 @@ warning 6002: The table/view 'C:\GITHUB\DRM\DRM\DATABASE\DATABASE.MDF.dbo.ChildC
           <Property Name="userName" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
           <Property Name="Password" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
           <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Classes" Relationship="Self.FK_Class_Employee" FromRole="Employee" ToRole="Class" />
         </EntityType>
         <EntityType Name="Parent">
           <Key>
@@ -145,22 +263,150 @@ warning 6002: The table/view 'C:\GITHUB\DRM\DRM\DATABASE\DATABASE.MDF.dbo.ChildC
           <Property Name="userName" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
           <Property Name="Password" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
           <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Children" Relationship="Self.FK_Child_Parent" FromRole="Parent" ToRole="Child" />
         </EntityType>
-        <EntityType Name="ChildClass">
+        <EntityType Name="sysdiagram">
           <Key>
-            <PropertyRef Name="ChildId" />
-            <PropertyRef Name="ClassId" />
+            <PropertyRef Name="diagram_id" />
           </Key>
-          <Property Name="ChildId" Type="Int32" Nullable="false" />
-          <Property Name="ClassId" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
+        <Association Name="FK_Child_Parent">
+          <End Role="Parent" Type="Self.Parent" Multiplicity="0..1" />
+          <End Role="Child" Type="Self.Child" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Parent">
+              <PropertyRef Name="ParentId" />
+            </Principal>
+            <Dependent Role="Child">
+              <PropertyRef Name="ParentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Class_Employee">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+          <End Role="Class" Type="Self.Class" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="EmployeeId" />
+            </Principal>
+            <Dependent Role="Class">
+              <PropertyRef Name="EmployeeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ChildClass">
+          <End Role="Child" Type="Self.Child" Multiplicity="*" />
+          <End Role="Class" Type="Self.Class" Multiplicity="*" />
+        </Association>
         <EntityContainer Name="DatabaseEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Children" EntityType="Self.Child" />
           <EntitySet Name="Classes" EntityType="Self.Class" />
           <EntitySet Name="Employees" EntityType="Self.Employee" />
           <EntitySet Name="Parents" EntityType="Self.Parent" />
-          <EntitySet Name="ChildClasses" EntityType="Self.ChildClass" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+          <AssociationSet Name="FK_Child_Parent" Association="Self.FK_Child_Parent">
+            <End Role="Parent" EntitySet="Parents" />
+            <End Role="Child" EntitySet="Children" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Class_Employee" Association="Self.FK_Class_Employee">
+            <End Role="Employee" EntitySet="Employees" />
+            <End Role="Class" EntitySet="Classes" />
+          </AssociationSet>
+          <AssociationSet Name="ChildClass" Association="Self.ChildClass">
+            <End Role="Child" EntitySet="Children" />
+            <End Role="Class" EntitySet="Classes" />
+          </AssociationSet>
+          <FunctionImport Name="sp_alterdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_creatediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_GetChild" ReturnType="Collection(DatabaseModel.sp_GetChild_Result)" />
+          <FunctionImport Name="sp_GetChildClass" ReturnType="Collection(DatabaseModel.sp_GetChildClass_Result)" />
+          <FunctionImport Name="sp_GetClass" ReturnType="Collection(DatabaseModel.sp_GetClass_Result)" />
+          <FunctionImport Name="sp_GetEmployee" ReturnType="Collection(DatabaseModel.sp_GetEmployee_Result)" />
+          <FunctionImport Name="sp_GetParent" ReturnType="Collection(DatabaseModel.sp_GetParent_Result)" />
+          <FunctionImport Name="sp_helpdiagramdefinition">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagrams">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_renamediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="new_diagramname" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_upgraddiagrams" />
         </EntityContainer>
+        <ComplexType Name="sp_GetChild_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="String" Name="FirstName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="LastName" Nullable="false" MaxLength="50" />
+          <Property Type="DateTime" Name="DoB" Nullable="false" Precision="23" />
+          <Property Type="String" Name="Address" Nullable="true" MaxLength="Max" />
+          <Property Type="String" Name="Province" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="City" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="HealthCard" Nullable="true" />
+          <Property Type="String" Name="DocName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="DocPhone" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Comments" Nullable="true" MaxLength="Max" />
+          <Property Type="Int32" Name="ParentId" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_GetChildClass_Result">
+          <Property Type="Int32" Name="ChildId" Nullable="false" />
+          <Property Type="Int32" Name="ClassId" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_GetClass_Result">
+          <Property Type="Int32" Name="ClassId" Nullable="false" />
+          <Property Type="String" Name="CName" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="Capacity" Nullable="true" />
+          <Property Type="String" Name="CStartEnd" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="EmployeeId" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_GetEmployee_Result">
+          <Property Type="Int32" Name="EmployeeId" Nullable="false" />
+          <Property Type="String" Name="EFirstName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="ELastName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="EAddress" Nullable="true" MaxLength="Max" />
+          <Property Type="String" Name="ECity" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="EProvince" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="EPhone" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="ERole" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="userName" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Password" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Email" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="sp_GetParent_Result">
+          <Property Type="Int32" Name="ParentId" Nullable="false" />
+          <Property Type="String" Name="PFirstName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="PLastName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="PAddress" Nullable="true" MaxLength="Max" />
+          <Property Type="String" Name="PCity" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="PProvince" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="PPhone" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="userName" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Password" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Email" Nullable="true" MaxLength="50" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -181,6 +427,7 @@ warning 6002: The table/view 'C:\GITHUB\DRM\DRM\DATABASE\DATABASE.MDF.dbo.ChildC
                 <ScalarProperty Name="DocName" ColumnName="DocName" />
                 <ScalarProperty Name="DocPhone" ColumnName="DocPhone" />
                 <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="ParentId" ColumnName="ParentId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -228,14 +475,102 @@ warning 6002: The table/view 'C:\GITHUB\DRM\DRM\DATABASE\DATABASE.MDF.dbo.ChildC
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="ChildClasses">
-            <EntityTypeMapping TypeName="DatabaseModel.ChildClass">
-              <MappingFragment StoreEntitySet="ChildClass">
-                <ScalarProperty Name="ChildId" ColumnName="ChildId" />
-                <ScalarProperty Name="ClassId" ColumnName="ClassId" />
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="DatabaseModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <AssociationSetMapping Name="ChildClass" TypeName="DatabaseModel.ChildClass" StoreEntitySet="ChildClass">
+            <EndProperty Name="Child">
+              <ScalarProperty Name="Id" ColumnName="ChildId" />
+            </EndProperty>
+            <EndProperty Name="Class">
+              <ScalarProperty Name="ClassId" ColumnName="ClassId" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="DatabaseModel.Store.sp_alterdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="DatabaseModel.Store.sp_creatediagram" />
+          <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="DatabaseModel.Store.sp_dropdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_GetChild" FunctionName="DatabaseModel.Store.sp_GetChild">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DatabaseModel.sp_GetChild_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="DoB" ColumnName="DoB" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Province" ColumnName="Province" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="HealthCard" ColumnName="HealthCard" />
+                <ScalarProperty Name="DocName" ColumnName="DocName" />
+                <ScalarProperty Name="DocPhone" ColumnName="DocPhone" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_GetChildClass" FunctionName="DatabaseModel.Store.sp_GetChildClass">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DatabaseModel.sp_GetChildClass_Result">
+                <ScalarProperty Name="ChildId" ColumnName="ChildId" />
+                <ScalarProperty Name="ClassId" ColumnName="ClassId" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_GetClass" FunctionName="DatabaseModel.Store.sp_GetClass">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DatabaseModel.sp_GetClass_Result">
+                <ScalarProperty Name="ClassId" ColumnName="ClassId" />
+                <ScalarProperty Name="CName" ColumnName="CName" />
+                <ScalarProperty Name="Capacity" ColumnName="Capacity" />
+                <ScalarProperty Name="CStartEnd" ColumnName="CStartEnd" />
+                <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_GetEmployee" FunctionName="DatabaseModel.Store.sp_GetEmployee">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DatabaseModel.sp_GetEmployee_Result">
+                <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+                <ScalarProperty Name="EFirstName" ColumnName="EFirstName" />
+                <ScalarProperty Name="ELastName" ColumnName="ELastName" />
+                <ScalarProperty Name="EAddress" ColumnName="EAddress" />
+                <ScalarProperty Name="ECity" ColumnName="ECity" />
+                <ScalarProperty Name="EProvince" ColumnName="EProvince" />
+                <ScalarProperty Name="EPhone" ColumnName="EPhone" />
+                <ScalarProperty Name="ERole" ColumnName="ERole" />
+                <ScalarProperty Name="userName" ColumnName="userName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_GetParent" FunctionName="DatabaseModel.Store.sp_GetParent">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DatabaseModel.sp_GetParent_Result">
+                <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+                <ScalarProperty Name="PFirstName" ColumnName="PFirstName" />
+                <ScalarProperty Name="PLastName" ColumnName="PLastName" />
+                <ScalarProperty Name="PAddress" ColumnName="PAddress" />
+                <ScalarProperty Name="PCity" ColumnName="PCity" />
+                <ScalarProperty Name="PProvince" ColumnName="PProvince" />
+                <ScalarProperty Name="PPhone" ColumnName="PPhone" />
+                <ScalarProperty Name="userName" ColumnName="userName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="DatabaseModel.Store.sp_helpdiagramdefinition" />
+          <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="DatabaseModel.Store.sp_helpdiagrams" />
+          <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="DatabaseModel.Store.sp_renamediagram" />
+          <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="DatabaseModel.Store.sp_upgraddiagrams" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

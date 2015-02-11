@@ -14,6 +14,11 @@ namespace DRM_Models
     
     public partial class Employee
     {
+        public Employee()
+        {
+            this.Classes = new HashSet<Class>();
+        }
+    
         public int EmployeeId { get; set; }
         public string EFirstName { get; set; }
         public string ELastName { get; set; }
@@ -25,5 +30,7 @@ namespace DRM_Models
         public string userName { get; set; }
         public string Password { get; set; }
         public string Email { get; set; }
+    
+        public virtual ICollection<Class> Classes { get; set; }
     }
 }

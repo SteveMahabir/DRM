@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2d495f7fee024e019a51f089cbc015f2" Name="Diagram1">
+        <EntityTypeShape EntityType="eStoreDBModel.Customer" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="eStoreDBModel.OrderLineitem" Width="1.5" PointX="5.25" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="eStoreDBModel.Order" Width="1.5" PointX="3" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="eStoreDBModel.Product" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
+        <AssociationConnector Association="eStoreDBModel.FK_CustHasOrder" ManuallyRouted="false" />
+        <AssociationConnector Association="eStoreDBModel.FK_ItemIsProduct" ManuallyRouted="false" />
+        <AssociationConnector Association="eStoreDBModel.FK_OrderHasItems" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="eStoreDBModel.C__MigrationHistory" Width="1.5" PointX="7.375" PointY="0.75" />
+        <EntityTypeShape EntityType="eStoreDBModel.AspNetRole" Width="1.5" PointX="5.375" PointY="7.5" />
+        <EntityTypeShape EntityType="eStoreDBModel.AspNetUserClaim" Width="1.5" PointX="9.875" PointY="6" />
+        <EntityTypeShape EntityType="eStoreDBModel.AspNetUserLogin" Width="1.5" PointX="9.875" PointY="8.75" />
+        <EntityTypeShape EntityType="eStoreDBModel.AspNetUser" Width="1.5" PointX="7.625" PointY="7" />
+        <EntityTypeShape EntityType="eStoreDBModel.Branch" Width="1.5" PointX="9.375" PointY="0.75" />
+        <AssociationConnector Association="eStoreDBModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_User_Id" />
+        <AssociationConnector Association="eStoreDBModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="eStoreDBModel.AspNetUserRoles" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

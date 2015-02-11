@@ -50,7 +50,6 @@ namespace DRM_ViewModels
 
         public void GetParent()
         {
-            ParentViewModel parent = new ParentViewModel();
             try
             {
                 ParentModel data = new ParentModel();

@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DRM_Model", "eStoreModels\DRM_Model.csproj", "{F7317FC0-E4F1-4386-A1DC-D873DE97993E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DRM_ViewModel", "eStoreViewModels\DRM_ViewModel.csproj", "{1EA608B9-AE46-4246-9F29-02CB0F1FCBBD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DRM_Website", "eStoreWebsite\DRM_Website.csproj", "{325D1DCD-5976-4F9B-A751-DECF65C2279F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F7317FC0-E4F1-4386-A1DC-D873DE97993E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7317FC0-E4F1-4386-A1DC-D873DE97993E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7317FC0-E4F1-4386-A1DC-D873DE97993E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7317FC0-E4F1-4386-A1DC-D873DE97993E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EA608B9-AE46-4246-9F29-02CB0F1FCBBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EA608B9-AE46-4246-9F29-02CB0F1FCBBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EA608B9-AE46-4246-9F29-02CB0F1FCBBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EA608B9-AE46-4246-9F29-02CB0F1FCBBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{325D1DCD-5976-4F9B-A751-DECF65C2279F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{325D1DCD-5976-4F9B-A751-DECF65C2279F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{325D1DCD-5976-4F9B-A751-DECF65C2279F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{325D1DCD-5976-4F9B-A751-DECF65C2279F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -14,10 +14,18 @@ namespace DRM_Models
     
     public partial class Class
     {
+        public Class()
+        {
+            this.Children = new HashSet<Child>();
+        }
+    
         public int ClassId { get; set; }
         public string CName { get; set; }
         public Nullable<int> Capacity { get; set; }
         public string CStartEnd { get; set; }
         public Nullable<int> EmployeeId { get; set; }
+    
+        public virtual Employee Employee { get; set; }
+        public virtual ICollection<Child> Children { get; set; }
     }
 }

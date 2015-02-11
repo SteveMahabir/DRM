@@ -14,6 +14,11 @@ namespace DRM_Models
     
     public partial class Parent
     {
+        public Parent()
+        {
+            this.Children = new HashSet<Child>();
+        }
+    
         public int ParentId { get; set; }
         public string PFirstName { get; set; }
         public string PLastName { get; set; }
@@ -24,5 +29,7 @@ namespace DRM_Models
         public string userName { get; set; }
         public string Password { get; set; }
         public string Email { get; set; }
+    
+        public virtual ICollection<Child> Children { get; set; }
     }
 }
