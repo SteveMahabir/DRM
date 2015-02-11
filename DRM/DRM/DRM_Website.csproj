@@ -284,29 +284,35 @@
     <Content Include="Images\orderedList7.png" />
     <Content Include="Images\orderedList8.png" />
     <Content Include="Images\orderedList9.png" />
-    <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
-    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
-    <Content Include="Views\Account\_RemoveExternalLoginsPartial.cshtml" />
-    <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
-    <Content Include="Views\Account\Login.cshtml" />
-    <Content Include="Views\Account\Manage.cshtml" />
-    <Content Include="Views\Account\Register.cshtml" />
-    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
-    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Web.config" />
+    <Content Include="Scripts\Views\_ViewStart.cshtml" />
+    <Content Include="Scripts\Views\Account\_ChangePasswordPartial.cshtml" />
+    <Content Include="Scripts\Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Scripts\Views\Account\_RemoveExternalLoginsPartial.cshtml" />
+    <Content Include="Scripts\Views\Account\_SetPasswordPartial.cshtml" />
+    <Content Include="Scripts\Views\Account\Login.cshtml" />
+    <Content Include="Scripts\Views\Account\Manage.cshtml" />
+    <Content Include="Scripts\Views\Account\Register.cshtml" />
+    <Content Include="Scripts\Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Scripts\Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Scripts\Views\Home\About.cshtml" />
+    <Content Include="Scripts\Views\Home\Contact.cshtml" />
+    <Content Include="Scripts\Views\Home\Index.cshtml" />
+    <Content Include="Scripts\Views\Shared\Error.cshtml" />
+    <Content Include="Scripts\Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Scripts\Views\Shared\_Layout.cshtml" />
+    <Content Include="Scripts\Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DRM_ViewModels\DRM_ViewModels.csproj">
+      <Project>{a4b74540-a3c2-4830-81c6-83705c8f05f3}</Project>
+      <Name>DRM_ViewModels</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

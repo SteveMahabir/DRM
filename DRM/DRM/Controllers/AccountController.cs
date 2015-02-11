@@ -10,6 +10,7 @@ using Microsoft.Web.WebPages.OAuth;
 using WebMatrix.WebData;
 using DRM.Filters;
 using DRM.Models;
+using DRM_ViewModels;
 
 namespace DRM.Controllers
 {
@@ -23,6 +24,9 @@ namespace DRM.Controllers
         [AllowAnonymous]
         public ActionResult Login(string returnUrl)
         {
+            ParentViewModel parent = new ParentViewModel();
+            parent.GetParent();
+
             ViewBag.ReturnUrl = returnUrl;
             return View();
         }

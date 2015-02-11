@@ -88,12 +88,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Database.edmx</DependentUpon>
     </Compile>
+    <Compile Include="DatabaseConfig.cs" />
     <Compile Include="Employee.cs">
       <DependentUpon>Database.tt</DependentUpon>
     </Compile>
     <Compile Include="Parent.cs">
       <DependentUpon>Database.tt</DependentUpon>
     </Compile>
+    <Compile Include="ParentModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
