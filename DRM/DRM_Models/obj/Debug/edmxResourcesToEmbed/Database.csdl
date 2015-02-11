@@ -1,14 +1,75 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="DatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-  <EntityContainer Name="DatabaseEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="Tables" EntityType="DatabaseModel.Table" />
-  </EntityContainer>
-  <EntityType Name="Table">
+<Schema Namespace="DatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Child">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" />
-    <Property Name="FirstName" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-    <Property Name="LastName" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="DoB" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Province" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HealthCard" Type="Int32" />
+    <Property Name="DocName" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="DocPhone" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
   </EntityType>
+  <EntityType Name="Class">
+    <Key>
+      <PropertyRef Name="ClassId" />
+    </Key>
+    <Property Name="ClassId" Type="Int32" Nullable="false" />
+    <Property Name="CName" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Capacity" Type="Int32" />
+    <Property Name="CStartEnd" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="EmployeeId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="EmployeeId" />
+    </Key>
+    <Property Name="EmployeeId" Type="Int32" Nullable="false" />
+    <Property Name="EFirstName" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="ELastName" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="EAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ECity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EProvince" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EPhone" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="ERole" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="userName" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Parent">
+    <Key>
+      <PropertyRef Name="ParentId" />
+    </Key>
+    <Property Name="ParentId" Type="Int32" Nullable="false" />
+    <Property Name="PFirstName" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="PLastName" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="PAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PCity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PProvince" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PPhone" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="userName" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ChildClass">
+    <Key>
+      <PropertyRef Name="ChildId" />
+      <PropertyRef Name="ClassId" />
+    </Key>
+    <Property Name="ChildId" Type="Int32" Nullable="false" />
+    <Property Name="ClassId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="DatabaseEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Children" EntityType="Self.Child" />
+    <EntitySet Name="Classes" EntityType="Self.Class" />
+    <EntitySet Name="Employees" EntityType="Self.Employee" />
+    <EntitySet Name="Parents" EntityType="Self.Parent" />
+    <EntitySet Name="ChildClasses" EntityType="Self.ChildClass" />
+  </EntityContainer>
 </Schema>

@@ -17,5 +17,13 @@ namespace DRM_Models
         public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        public System.DateTime DoB { get; set; }
+        public string Address { get; set; }
+        public string Province { get; set; }
+        public string City { get; set; }
+        public Nullable<int> HealthCard { get; set; }
+        public string DocName { get; set; }
+        public string DocPhone { get; set; }
+        public string Comments { get; set; }
     }
 }

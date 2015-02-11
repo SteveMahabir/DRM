@@ -26,5 +26,9 @@ namespace DRM_Models
         }
     
         public virtual DbSet<Child> Children { get; set; }
+        public virtual DbSet<Class> Classes { get; set; }
+        public virtual DbSet<Employee> Employees { get; set; }
+        public virtual DbSet<Parent> Parents { get; set; }
+        public virtual DbSet<ChildClass> ChildClasses { get; set; }
     }
 }
