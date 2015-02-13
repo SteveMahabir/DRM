@@ -174,7 +174,12 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BranchesController.cs" />
     <Compile Include="Controllers\BranchesRestController.cs" />
+    <Compile Include="Controllers\ChildController.cs" />
+    <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MyChildController.cs" />
+    <Compile Include="Controllers\MyInfoController.cs" />
+    <Compile Include="Controllers\ParentController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -240,6 +245,13 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Branches\Index.cshtml" />
     <Content Include="Views\Branches\PopupMessage.cshtml" />
+    <Content Include="Views\Child\Index.cshtml" />
+    <Content Include="Views\Parent\Index.cshtml" />
+    <Content Include="Views\Employee\Index.cshtml" />
+    <Content Include="Views\MyInfo\Index.cshtml" />
+    <Content Include="Views\MyChild\Index.cshtml" />
+    <Content Include="Views\Employee\PopupMessage.cshtml" />
+    <Content Include="Views\Child\PopupMessage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
