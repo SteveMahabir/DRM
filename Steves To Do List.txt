@@ -1,0 +1,30 @@
+12 / Feb / 2015
+
+	MODEL LAYER
+	
+Rename eStoreModelConfig to DRM
+	
+Rename Customer Model to Parent Mode
+
+Update Database to have a Parent Table
+
+
+	VIEW MODEL LAYER
+
+
+
+Rename eStoreViewModelConfig to DRM
+
+Alter Customer View Model to be Parent View Model
+
+Remove OrderViewModel
+Remove ProductViewModel
+Remove CartItem
+
+
+	PRESENTATION LAYER
+	
+Remove ViewCart
+Remove Shop
+Remove Orders
+

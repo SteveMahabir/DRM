@@ -1,0 +1,1 @@
+If you have problems commiting or reverting your changes because the Local database cannot be modified, stop your SQL Server

@@ -1,0 +1,52 @@
+﻿@using eStoreWebsite.Helpers
+@{
+    ViewBag.Title = "eStore ViewCart";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*Title of Page*@
+<html>
+<head>
+    <title>View Cart</title>
+</head>
+
+@*Shopping Menu Modal*@
+<body>
+    <div id="wrap" style="overflow: auto;">
+        <div id="main-content" data-mnuitem="shpMnuItem" style="margin-left: 25%; margin-top: 5%; width: 50%; border: 1px solid lightblue; border-radius: 20px; box-shadow: 10px 5px 10px 7px #888888; ">
+            <div class="span12" style="margin: 50px">
+                @using (
+                        Ajax.BeginForm("genOrder", "ViewCart", new AjaxOptions
+                        {
+                            LoadingElementId = "ajaxSplash",
+                            InsertionMode = InsertionMode.Replace,
+                            HttpMethod = "GET",
+                            UpdateTargetId = "messg2",
+                            OnComplete = "$('#orderButton').hide()"
+                        }))
+                {
+                    @Html.AntiForgeryToken()
+                    //Body of Modal
+                    <center><h2 id="cathead">YOUR CART CONTAINS</h2></center>
+                    <div class="row text-center">
+                        <div id="messg2"></div>
+                        <img src="~/Content/Pictures/2.jpg" alt="Surfboards" height="200" width="200" style="padding-left: 20px" class="banner">
+                        <h3>@DateTime.Now</h3>
+                    </div>
+                    <br />
+                    //Footer of Modal
+                    <div id="viewcart">
+                        @Html.ViewCart("viewcart")
+                        <br />
+                        <div class="row text-center">
+                            <input id="orderButton" type="submit" class='btn btn-primary' value='Check Out' />
+                            <div id="ajaxSplash" style="display: none; z-index: 60;">Creating Order Now! Please Wait...</div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

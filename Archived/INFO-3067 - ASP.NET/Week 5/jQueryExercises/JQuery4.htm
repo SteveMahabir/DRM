@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <link href="jQueryExercises.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="jquery-1.10.2.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+
+            var oldElem                            
+            var tbl = $("<table>").addClass("dynaTable");
+            var noteNo = 0;
+            var oldRow;
+
+            // hardcoded JSON object array
+            var collNotes =
+               {
+                   "notes": [
+                     { "id": "1", "to": "worker", "from": "boss", "heading": "Reminder", "notebody": "Don't forget to work on that report this weekend!" },
+                     { "id": "2", "to": "worker", "from": "boss", "heading": "Reminder 2", "notebody": "Don't forget to pick up my dry cleaning!" },
+                     { "id": "3", "to": "boss", "from": "worker", "heading": "Dog", "notebody": "I walked your dog for 15 min. this morning" },
+                     { "id": "4", "to": "boss", "from": "worker", "heading": "Car", "notebody": "Your car is now washed, waxed and detailed!" },
+                   ]
+               }
+
+            $("td").click(function () {                          // click on table cell
+
+                if (oldRow != null)
+                    $(oldRow).toggleClass("itemSelected");
+
+                oldRow = $(this).parents("tr");                 // determine row
+                oldRow.toggleClass("itemSelected");             // turn off previous row
+                cellContents = $(this).html();
+                noteNo = parseInt(cellContents.substr(cellContents.indexOf(" ") + 1, cellContents.length - (cellContents.indexOf(" ") + 1)));  // note number
+                tableBuilder(noteNo, collNotes,tbl);
+            });
+        });
+
+
+        function tableBuilder(noteNo, collNotes, tbl) {
+
+            // delete rows from old table (if it exists)
+            $(tbl).find("tr").remove();
+
+            /* Row */
+            var tr = $("<tr>");
+            tr.html('<td colspan="4" class="tblItemBigHead">Note # ' + noteNo + '</td>');
+            tr.appendTo(tbl);      // add row to table
+
+            /* Row */
+            tr = $("<tr>");
+            tr.html('<td style="width:20%;text-align:center;" class="tblItemHead">From</td>' +
+                    '<td style="width:15%;text-align:center;" class="tblItemHead">To</td>' +
+                    '<td style="width:15%;text-align:center;" class="tblItemHead">Topic</td>' +
+                    '<td style="width:50%;text-align:center;" class="tblItemHead">Message</td>');
+            tr.appendTo(tbl);      // add row to table
+
+            $.each(collNotes.notes, function (index, note) {
+                // select correct note  
+                tr = $("<tr>").addClass("itemData");
+
+                if (noteNo == note.id) { // id
+                    tr.html('<td style="width:20%;text-align:center">' + note.from + '</td>' +
+                            '<td style="width:15%;text-align:center">' + note.to + '</td>' +
+                            '<td style="width:15%;text-align:center">' + note.heading + '</td>' +
+                            '<td style="width:50%;text-align:center">' + note.notebody + '</td>');
+                }  // end if
+
+                tr.appendTo(tbl);      // add row to table
+            })   // end each
+
+
+            $("body").append(tbl); // add table to body
+        }
+    </script>
+    <title>JQuery 4 Exercise #4</title>
+</head>
+<body>
+    <h3>JQuery 4 - Build a dynamically generated table from JSON data</h3>
+    <table id="mainTable" border="1">
+        <tr>
+            <td>Note 1</td>
+        </tr>
+        <tr>
+            <td>Note 2</td>
+        </tr>
+        <tr>
+            <td>Note 3</td>
+        </tr>
+        <tr>
+            <td>Note 4</td>
+        </tr>
+    </table>
+    <br />
+    <a href="JQuery3.htm">Previous Exercise</a>
+    <a href="JQuery5.htm">Next Exercise</a>
+
+</body>
+</html>

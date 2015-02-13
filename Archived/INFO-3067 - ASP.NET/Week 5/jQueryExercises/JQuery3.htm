@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+   <link href="jQueryExercises.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="jquery-1.10.2.min.js"></script>
+      <script type="text/javascript">
+
+        $(function () {
+
+            var oldElem
+            var tbl = $("<table>").addClass("dynaTable");
+            var numOfRows = 0;
+            var oldRow;
+
+            $("td").click(function () {                          // click on cell
+                if (oldRow != null)
+                    $(oldRow).toggleClass("itemSelected");
+                
+                oldRow = $(this).parents("tr");                 // determine row
+                oldRow.toggleClass("itemSelected");             // turn off previous row
+                cellContents = $(this).html();
+                numOfRows = cellContents.substring(cellContents.indexOf("Rows") - 2, 1);                   // before decimal
+                tableBuilder(numOfRows,tbl);
+            });
+        });
+
+        function tableBuilder(rows,tbl) {  // rows based on passed int
+
+            var idx = 0;
+            idx = parseInt(rows) + 1;
+            
+            // delete rows from old table (if it exists)
+            $(tbl).find("tr").remove();
+
+            // create the new table
+            for (i = 1; i < idx; i++) {
+                var tr = $("<tr>");
+
+                for (i2 = 1; i2 < idx; i2++) {
+                    var td = $("<td>");
+                    td.text(" Row " + i + " Column " + i2);
+                    td.addClass("defItem");
+                    td.css("border", "inset 1px");
+                    td.appendTo(tr); // add cell to table
+                }
+
+                tr.appendTo(tbl);  // add row to table
+            }
+
+            $("body").append(tbl); // add table to body
+        }
+    </script>                                                       
+    <title>JQuery 3 Exercise #3</title>
+</head>
+<body>
+    <h3>JQuery 3 - Build a dynamically generated table</h3>
+	<table id="mainTable">
+		<tr>
+			<td>1 Rows</td><td>1 Column</td>
+		</tr>
+		<tr>
+			<td>2 Rows</td><td>2 Columns</td>
+		</tr>
+		<tr>
+			<td>3 Rows</td><td>3 Columns</td>
+		</tr>
+		<tr>
+			<td>4 Rows</td><td>4 Columns</td>
+		</tr>
+		<tr>
+			<td>5 Rows</td><td>5 Columns</td>
+		</tr>
+	</table>
+    <br />
+    <a href="JQuery2.htm">Previous Exercise</a>
+    <a href="JQuery4.htm">Next Exercise</a>
+
+</body>
+</html>

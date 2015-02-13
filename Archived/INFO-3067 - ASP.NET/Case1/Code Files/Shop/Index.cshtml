@@ -1,0 +1,89 @@
+﻿@using eStoreWebsite.Helpers
+@{
+    ViewBag.Title = "Shop/Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@*Title of Page*@
+<div id="wrap" style="overflow: auto;">
+    <div id="main-content" data-mnuitem="shpMnuItem">
+        <div class="span12">
+            <center><h2 id="cathead">Our Current Products</h2></center>
+            <div id="catalogue">
+                @Html.Catalogue("mycat")
+            </div>
+        </div>
+    </div>
+</div>
+
+@*Details Popup (Modal)*@
+<div class="modal" id="detail_popup">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                @*Header of Modal*@
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                <div style="font-size: x-large; padding-bottom: 20px; text-align: center;">
+                    Add to Cart
+                </div>
+                <div class="row text-center">
+                    <img src="~/Content/Pictures/Banner.jpg" alt="Surfboards" height="100" style="padding-left: 20px" class="banner">
+                </div>
+            </div>
+            @using (
+                    Ajax.BeginForm("AddToCart", "Shop", new AjaxOptions
+                    {
+                        LoadingElementId = "ajaxSplash",
+                        InsertionMode = InsertionMode.Replace,
+                        HttpMethod = "GET",
+                        UpdateTargetId = "messg2"
+                    }))
+            {
+                @Html.AntiForgeryToken()
+                //Body of Modal
+                <div class="modal-body">
+
+                    <div id="content-body" style=" column-count: 2; -moz-column-count: 2; -webkit-column-count: 2;">
+                        <div class="details-left" style="float: left;">
+                            <div id="detailsProdName" class="h1"></div>
+                            <img id="detailsGraphic" />
+                            <br />
+                            <br />
+                        </div>
+                        <div class="details-right" style="text-align: center; float: left;">
+                            <br />
+                            <div id="detailsDescr"></div>
+                        </div>
+                    </div>
+                    <div id="content-footer" style=" column-count: 2; -moz-column-count: 2; -webkit-column-count: 2;">
+                        <div>
+                            <br />
+                            <label>Price: </label>
+                            <label id="detailsPrice"></label>
+                            <br />
+                            <label>Quantity:</label>
+                            <input type="number" min="0" id="qty" name="qty" style="width: auto" />
+                            <div id="messg2"></div>
+                        </div>
+                        <div>
+                            <br />
+                            <input type="submit" class="btn btn-primary pull-left" value="Add!" />
+                            <input type="submit" value=" View Cart " class="btn btn-primary" style="margin-left: 5px;"onclick="$(location).attr('href', 'ViewCart')" />
+                            <br />
+                            <br />
+                        </div>
+                    </div>
+                </div>
+                
+                //Footer of Modal
+                <div class="modal-footer">
+                    <br /><br />
+                    <div id="messg2">@Html.Partial("PopupMessage")</div>
+                    @Html.Hidden("detailsProdcd");
+                    <div id="ajaxSplash" style="display: none; z-index: 60;">Loading...</div>
+
+                </div>
+                
+            }
+        </div>
+    </div>
+</div>

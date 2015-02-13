@@ -1,0 +1,104 @@
+--
+-- Summer 2014 INFO3067 BASE SQL Script for eStoreDB
+--
+-- start in the master
+USE master
+GO
+
+-- delete the old db
+DROP DATABASE eStoreDB
+GO
+
+-- create the db
+CREATE DATABASE eStoreDB
+ON
+  PRIMARY (NAME=eStoreDBData,  
+  FILENAME='C:\temp\eStoreDBData.mdf', 
+  SIZE=10MB,
+  MAXSIZE=15MB,
+  FILEGROWTH=20%) 
+LOG ON 
+  (NAME=eStoreDBLog, 
+  FILENAME= 'C:\temp\eStoreDBLog.ldf', 
+  SIZE=3MB,
+  MAXSIZE=5MB,
+  FILEGROWTH=1MB)
+COLLATE SQL_Latin1_General_Cp1_CI_AS
+GO
+
+-- switch to the new db
+USE eStoreDB
+GO
+
+-- shouldn't need these to begin with
+-- uncomment out if needed later
+--DROP TABLE OrderLineItems
+GO
+--DROP TABLE Orders
+GO
+--DROP TABLE Products
+GO
+--DROP TABLE Customers
+GO
+-- DROP TABLE Branches
+GO
+CREATE TABLE Customers
+(
+	CustomerID     int IDENTITY(1,1) NOT NULL,
+	FirstName      nvarchar(50) NULL,
+	LastName       nvarchar(50) NULL,
+	Email          nvarchar(50) NULL,
+	Age            int NULL,
+	Address1       nvarchar(120) NULL,
+	City           nvarchar(120) NULL,
+	Mailcode       nvarchar(50) NULL,
+	Region         nvarchar(50) NULL,
+	Country        nvarchar(50) NULL,
+	Creditcardtype nvarchar(50) NULL,
+	Timer          timestamp NULL,
+	Username       nvarchar(50) NULL,
+ CONSTRAINT PK_Customer PRIMARY KEY CLUSTERED (CustomerID)
+)
+
+GO
+CREATE TABLE Orders
+(
+	OrderID        int IDENTITY(1,1) NOT NULL,
+	OrderDate      datetime NOT NULL,
+	OrderAmount    money NOT NULL,
+	CustomerID     int NOT NULL,
+	Timer          timestamp NULL,
+ CONSTRAINT PK_Orders PRIMARY KEY CLUSTERED (OrderID), 
+ CONSTRAINT FK_CustHasOrder FOREIGN KEY(CustomerID) REFERENCES Customers (CustomerID)
+)
+GO
+CREATE TABLE Products
+(
+	ProductID      nvarchar(15) NOT NULL,
+	ProductName    nvarchar(50) NOT NULL,
+	GraphicName    nvarchar(20) NOT NULL,
+	CostPrice      money NOT NULL,
+	MSRP           money NOT NULL,
+	QtyOnHand      int NOT NULL,
+	QtyOnBackOrder int NOT NULL,
+	Description    nvarchar(2000) NULL,
+	Timer          timestamp NULL,
+ CONSTRAINT PK_Products PRIMARY KEY CLUSTERED (ProductID) 
+)
+
+GO
+CREATE TABLE dbo.OrderLineitems(
+	LineItemID     int IDENTITY(1,1) NOT NULL,
+	OrderID        int NOT NULL,
+	ProductID      nvarchar(15) NOT NULL,
+	QtyOrdered     int NOT NULL,
+	QtySold        int NOT NULL,
+	QtyBackOrdered int NOT NULL,
+	SellingPrice   money NOT NULL,
+	Timer          timestamp NULL,
+ CONSTRAINT PK_OrderLineItems PRIMARY KEY CLUSTERED (LineItemID),
+ CONSTRAINT FK_OrderHasItems FOREIGN KEY(OrderID) REFERENCES Orders (OrderID),
+ CONSTRAINT FK_ItemIsProduct FOREIGN KEY(ProductID) REFERENCES Products (ProductID)
+ )
+ GO
+  

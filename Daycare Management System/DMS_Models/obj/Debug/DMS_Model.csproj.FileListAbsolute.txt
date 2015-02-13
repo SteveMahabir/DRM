@@ -1,0 +1,18 @@
+C:\GitHub\DRM\eStoreCase1\eStoreModels\bin\Debug\eStoreModels.dll.config
+C:\GitHub\DRM\eStoreCase1\eStoreModels\bin\Debug\eStoreModels.dll
+C:\GitHub\DRM\eStoreCase1\eStoreModels\bin\Debug\eStoreModels.pdb
+C:\GitHub\DRM\eStoreCase1\eStoreModels\bin\Debug\EntityFramework.dll
+C:\GitHub\DRM\eStoreCase1\eStoreModels\bin\Debug\EntityFramework.SqlServer.dll
+C:\GitHub\DRM\eStoreCase1\eStoreModels\bin\Debug\EntityFramework.xml
+C:\GitHub\DRM\eStoreCase1\eStoreModels\bin\Debug\EntityFramework.SqlServer.xml
+C:\GitHub\DRM\eStoreCase1\eStoreModels\obj\Debug\eStoreModels.dll
+C:\GitHub\DRM\eStoreCase1\eStoreModels\obj\Debug\eStoreModels.pdb
+C:\GitHub\DRM\Daycare Management System\DMS_Models\bin\Debug\DMS_Model.dll.config
+C:\GitHub\DRM\Daycare Management System\DMS_Models\bin\Debug\DMS_Model.dll
+C:\GitHub\DRM\Daycare Management System\DMS_Models\bin\Debug\DMS_Model.pdb
+C:\GitHub\DRM\Daycare Management System\DMS_Models\bin\Debug\EntityFramework.dll
+C:\GitHub\DRM\Daycare Management System\DMS_Models\bin\Debug\EntityFramework.SqlServer.dll
+C:\GitHub\DRM\Daycare Management System\DMS_Models\bin\Debug\EntityFramework.xml
+C:\GitHub\DRM\Daycare Management System\DMS_Models\bin\Debug\EntityFramework.SqlServer.xml
+C:\GitHub\DRM\Daycare Management System\DMS_Models\obj\Debug\DMS_Model.dll
+C:\GitHub\DRM\Daycare Management System\DMS_Models\obj\Debug\DMS_Model.pdb

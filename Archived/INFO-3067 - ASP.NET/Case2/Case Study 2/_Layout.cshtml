@@ -1,0 +1,350 @@
+﻿@{
+    @model eStoreViewModels.CustomerViewModel
+    if (Session["loggedIn"] == null)
+    {
+        Session["loggedIn"] = false;
+    }
+    bool logged_in = (bool)Session["loggedIn"];
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surf Shop</title>
+    @Styles.Render("~/Content/css");
+</head>
+
+<body>
+    @*Include Javascript Files*@
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/Scripts/tabs-navigation.js"></script>
+
+    @*Main Content*@
+    <div id="wrap" style="min-height: 100%; position: relative">
+
+        <nav class="navbar navbar-default" role="navigation" style="margin-top: -68px;">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">INFO3067</a>
+            </div>
+            <div class="col-md-2"></div>
+            @*Store Navigation Headings*@
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="~/Home">Home</a></li>
+                <li><a href="~/Home#register_popup" data-toggle="modal">Register</a></li>
+                <li><a href="~/Home#login_popup" data-toggle="modal">Login</a></li>
+                <li id="lgOtMnuItem"><a href="javascript:document.getElementById('logoutForm').submit()">Log Out</a></li>
+                <li><a href="~/Shop">Shop</a></li>
+                <li><a href="~/Orders">Orders</a></li>
+                <li><a href="~/Branches">Branches</a></li>
+            </ul>
+
+            @*Login Message*@
+            <ul class="nav pull-right" style="padding-right:10px; padding-top: 18px; ">
+                <li>@ViewBag.Message</li>
+            </ul>
+            <ul class="nav pull-right" style="padding-top: 10px;">
+                <li>@Session["LoginStatus"]</li>
+            </ul>
+            @using (Html.BeginForm("LogOff", "Home", FormMethod.Post, new { id = "logoutForm" }))
+            {
+                @Html.AntiForgeryToken()
+            }
+        </nav>
+
+        @*Main Content*@
+        <div class="container body-content" style="padding-top: 1px;">
+            @RenderBody()
+            <hr />
+        </div>
+    </div>
+
+    @*Footer Content*@
+    <footer>
+        <div id="footer" style="margin-top: 5%; width: 100%; bottom: 0px;">
+
+            <div id="copyright">
+                <p>&copy; @DateTime.Now.Year - INFO-3067</p>
+                <input type="hidden" value=@Session["CustomerID"] id="customer" />
+            </div>
+        </div>
+    </footer>
+
+    @*Script to change which tab is active*@
+    <script type="text/javascript">
+        //Main Method
+        $(document).ready(function () {
+            setActive();
+        });
+
+        //Data Members
+        var popupTbl;
+        var oldElem
+        var noteNo = 0;
+        var myWindow;
+        var oldRow;
+        var oldClass;
+        var oid;
+        var orderDate;
+        var allOrders;
+        var data;
+
+        //Set Active
+        function setActive() {
+            var route = window.location.pathname;
+            var substr = route.split('/');
+            var method = substr[substr.length - 1];
+
+            $('.nav li').each(function () {
+                if ($(this).hasClass('active')) {
+                    $(this).removeClass('active');
+                }
+            });
+
+            $('.nav li a').each(function () {
+                if ($(this).text() == method) {
+                    $(this).parent().addClass('active');
+                }
+            });
+        }
+
+        // Get Orders
+        function getOrders(oid, allOrders) {
+            if (allOrders == null) // Go only to the server once
+            {
+                $.getJSON("api/orderrest/" + $("#customer").val(), null, function (data, status, jqXHR) {
+                    buildOrder(oid, orderDate, data); // call is asynchronous, so build in if
+                    allOrders = data;                 // before loading global data for else
+                }).error(function (jqXHR, textStatus, errorThrown) //problem
+                {
+                    console.log("ERROR" + textStatus + " - " + errorThrown);
+                });
+            }
+            else {
+                buildOrder(oid, orderDate, allOrders);
+            }
+        }
+
+        // Click Function
+        $('td').click(function () {
+            // if we have more than 1 table, we want the right one
+            if ($(this).attr('id') == 'OrderNo') {
+
+                //Show Model
+                $("#popup").modal("show")
+                
+                //Remove old table
+                if (oldRow != null) {
+                    //oldRow.removeAttr("style");
+                    oldRow.removeAttr("class");
+                    $(oldRow).toggleClass("itemSelected");
+                    $(oldRow).toggleClass(oldClass);
+                }
+                oldRow = $(this).parents("tr");
+                oldClass = oldRow.attr("class");
+                //oldRow.removeAttr("style");
+                oldRow.removeAttr("class");
+                oldRow.toggleClass("itemSelected");
+
+                //Populate
+                oid = $(this).text();
+                $('#PopupBanner').text("Order# " + oid);
+                orderDate = oldRow[0].cells[1].innerHTML;
+                $('#OrderSelectedDate').text("Date: " + orderDate);
+
+                cellContents = $(this).html();
+
+                //Build Order
+                getOrders(oid, allOrders);
+            }
+        });
+
+        // Build the Order Table
+        function buildOrder(oid, orderDate, allOrders) {
+            var tax = 0;
+            var netTotal = 0;
+            var grossTotal = 0;
+            var extended = 0;
+            //Build the Table
+            var tbl = $('<table>');
+            // delete rows from old table (if it exists)
+            $(tbl).find("tr").remove();
+
+            /* Row */
+            var tr = $("<tr>");
+
+            /* Row */
+            tr = $("<tr>");
+            tr = $("<tr>").addClass("orderHeader");
+            tr.html('<td style="width:30%;text-align:center;" class="tblItemHead"><b>Product Name</b></td>' +
+                    '<td style="width:20%;text-align:center;" class="tblItemHead"><b>Sell Price</b></td>' +
+                    '<td style="width:10%;text-align:center;" class="tblItemHead"><b>QtyS</b></td>' +
+                    '<td style="width:10%;text-align:center;" class="tblItemHead"><b>QtyO</b></td>' +
+                    '<td style="width:10%;text-align:center;" class="tblItemHead"><b>QtyB</b></td>' +
+                    '<td style="width:15%;text-align:center;" class="tblItemHead"><b>Extended</b></td>');
+            tr.appendTo(tbl);      // add row to table
+
+            tr = $("<tr>").addClass("itemData");
+            //Search Entire Orders Collection
+            $.each(allOrders, function (itemNumber, order) {
+                //Search Specific OrderItem Purchased
+                if (order.OrderID == oid) {
+                    //Main Data Output
+                    $.each(order, function (heading, info) {
+                        extended = order.SellingPrice * order.QtySold;
+                        tr.html('<td style="width:15%;text-align:center">' + order.ProductName + '</td>' +
+                                '<td style="width:15%;text-align:center">' + cur(order.SellingPrice) + '</td>' +
+                                '<td style="width:15%;text-align:center">' + order.QtySold + '</td>' +
+                                '<td style="width:15%;text-align:center">' + order.QtyOrdered + '</td>' +
+                                '<td style="width:15%;text-align:center">' + order.QtyBackOrdered + '</td>' +
+                                '<td style="width:50%;text-align:center">' + cur(extended) + '</td>');
+                        tr.appendTo(tbl);      // add row to table
+                        $("#DateOfOrder").text("Date: " + order.OrderDate);
+                    });
+                    netTotal += extended;
+                    tr = $("<tr>");
+                }
+            });//end each
+
+            /* Dotted Lines */
+            tr = $("<tr>");
+            tr.html('<td style="width:30%;text-align:center;" class="tblItemHead"></td>' +
+                    '<td style="width:20%;text-align:center;" class="tblItemHead"></td>' +
+                    '<td style="width:10%;text-align:center;" class="tblItemHead"></td>' +
+                    '<td style="width:10%;text-align:center;" class="tblItemHead"></td>' +
+                    '<td style="width:10%;text-align:center;" class="tblItemHead"></td>' +
+                    '<td style="width:15%;text-align:center;" class="tblItemHead">---------</td>');
+            tr.appendTo(tbl);      // add row to table
+            tr = $("<tr>").addClass("itemData");
+
+            /* Net Total  */
+            tr = $("<tr>");
+            tr.html('<td style="width:30%;text-align:center;" class="tblItemHead"></td>' +
+                    '<td style="width:20%;text-align:center;" class="tblItemHead"></td>' +
+                    '<td style="width:10%;text-align:center;" class="tblItemHead"></td>' +
+                    '<td style="width:10%;text-align:center;" class="tblItemHead"></td>' +
+                    '<td style="width:10%;text-align:center;" class="tblItemHead"><b>Net: </b></td>' +
+                    '<td style="width:15%;text-align:center;" class="tblItemHead">' + cur(netTotal) + '</td>');
+            tr.appendTo(tbl);      // add row to table
+            tr = $("<tr>").addClass("itemData");
+
+            /* Tax */
+            tax = netTotal * .13;
+            tr = $("<tr>");
+            tr.html('<td style="width:30%;text-align:center;" class="tblItemHead"></td>' +
+                    '<td style="width:20%;text-align:center;" class="tblItemHead"></td>' +
+                    '<td style="width:10%;text-align:center;" class="tblItemHead"></td>' +
+                    '<td style="width:10%;text-align:center;" class="tblItemHead"></td>' +
+                    '<td style="width:10%;text-align:center;" class="tblItemHead"><b>Tax: </b></td>' +
+                    '<td style="width:15%;text-align:center;" class="tblItemHead">' + cur(tax) + '</td>');
+            tr.appendTo(tbl);      // add row to table
+            tr = $("<tr>").addClass("itemData");
+
+            /* Order Total */
+            grossTotal = netTotal + tax;
+            tr = $("<tr>");
+            tr.html('<td style="width:30%;text-align:center;" class="tblItemHead"></td>' +
+                    '<td style="width:20%;text-align:center;" class="tblItemHead"></td>' +
+                    '<td style="width:10%;text-align:center;" class="tblItemHead"></td>' +
+                    '<td style="width:10%;text-align:center;" class="tblItemHead"></td>' +
+                    '<td style="width:10%;text-align:center;" class="tblItemHead"><b>Gross: </b></td>' +
+                    '<td style="width:15%;text-align:center;" class="tblItemHead">' + cur(grossTotal) + '</td>');
+            tr.appendTo(tbl);      // add row to table
+            tr = $("<tr>").addClass("itemData");
+
+            $('#popupTbl').find("tr").remove();      // clean out old stuff
+            $('#popupTbl').append($(tbl).html());    // put in new stuff
+
+
+
+
+        }//End Build
+
+        // obtained from the internet unknown source
+        function cur(num) {
+            num = num.toString().replace(/\$|\,/g, '');
+            if (isNaN(num))
+                num = "0";
+            sign = (num == (num = Math.abs(num)));
+            num = Math.floor(num * 100 + 0.50000000001);
+            cents = num % 100;
+            num = Math.floor(num / 100).toString();
+            if (cents < 10)
+                cents = "0" + cents;
+            for (var i = 0; i < Math.floor((num.length - (1 + i)) / 3) ; i++)
+                num = num.substring(0, num.length - (4 * i + 3)) + ',' +
+                num.substring(num.length - (4 * i + 3));
+            return (((sign) ? '' : '-') + '$' + num + '.' + cents);
+        }
+
+        //GOOGLE MAPS
+
+        $('#findthem').click(function () {
+            var address = $("#address").val(); // address textbox
+            geocoder = new google.maps.Geocoder();
+            geocoder.geocode({ 'address': address }, function (results, status) {
+                if (status == google.maps.GeocoderStatus.OK) { // only if google gives us the OK
+                    var lat = results[0].geometry.location.lat();
+                    var lng = results[0].geometry.location.lng();
+                    $.getJSON("api/closebranches/" + lat + "/" + lng + "/", null, function (locations, textStatus, jqXHR) {
+                        init_map(lat, lng, locations);
+                    }).error(function (jqXHR, textStatus, errorThrown) {
+                        console.log(textStatus + " - " + errorThrown);
+                        alert("There was a problem connecting to the host, try again later");
+                    })// end Error
+                }// end if
+            })//end geocode
+        });//end findthem
+
+        function init_map(lat, lng, myPositions) {
+            var myLatLng = new google.maps.LatLng(lat, lng);
+            var map_canvas = $("#map_canvas")[0];
+            var options = {
+                zoom: 9,
+                center: myLatLng,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            var map = new google.maps.Map(map_canvas, options);
+            var center = map.getCenter();
+            var i2 = 0;
+            var infowindow = null;
+            infowindow = new google.maps.InfoWindow({ content: "holding..." });
+
+            $.each(myPositions, function (index, position) {
+                i2 = i2 + 1;
+                //Please a marker
+                marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(position.Latitude, position.Longitude),
+                    map: map,
+                    animation: google.maps.Animation.DROP,
+                    icon: "Content/img/marker" + i2 + ".png",
+                    title: "Store#" + position.BranchID + " " + position.Street + ", "
+                                    + position.City + ", " + position.Region,
+                    html: "<div class='infoW'>" + "Store# " + position.BranchID + "<br/>" +
+                            position.Street + ", " + position.City + "<br/>" +
+                            position.Distance.toFixed(2) + " km</div>"
+                });
+
+                google.maps.event.addListener(marker, 'click', function () {
+                    infowindow.setContent(this.html); //added .html to the marker object.
+                    infowindow.close();
+                    infowindow.open(map, this);
+                    $('.infoW').parent().parent().css('overflow-y', 'hidden')
+                    $('.infoW').parent().css('overflow-y', 'hidden')
+                });
+            });
+
+            $("#maps_popup").modal("show")
+            google.maps.event.trigger(map, 'resize');
+            map.setCenter(center);
+        }//end init_map
+
+    </script>
+</body>
+</html>

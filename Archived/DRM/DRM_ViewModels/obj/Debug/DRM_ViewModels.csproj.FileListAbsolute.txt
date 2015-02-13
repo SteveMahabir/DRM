@@ -1,0 +1,9 @@
+C:\GitHub\DRM\DRM\DRM_ViewModels\bin\Debug\DRM_ViewModels.dll
+C:\GitHub\DRM\DRM\DRM_ViewModels\bin\Debug\DRM_ViewModels.pdb
+C:\GitHub\DRM\DRM\DRM_ViewModels\obj\Debug\DRM_ViewModels.csprojResolveAssemblyReference.cache
+C:\GitHub\DRM\DRM\DRM_ViewModels\obj\Debug\DRM_ViewModels.dll
+C:\GitHub\DRM\DRM\DRM_ViewModels\obj\Debug\DRM_ViewModels.pdb
+C:\GitHub\DRM\DRM\DRM_ViewModels\bin\Debug\DRM_Models.dll
+C:\GitHub\DRM\DRM\DRM_ViewModels\bin\Debug\EntityFramework.dll
+C:\GitHub\DRM\DRM\DRM_ViewModels\bin\Debug\DRM_Models.pdb
+C:\GitHub\DRM\DRM\DRM_ViewModels\bin\Debug\EntityFramework.xml

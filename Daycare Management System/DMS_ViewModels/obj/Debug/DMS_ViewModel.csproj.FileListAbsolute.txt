@@ -1,0 +1,27 @@
+C:\GitHub\DRM\eStoreCase1\eStoreViewModels\bin\Debug\eStoreViewModels.dll
+C:\GitHub\DRM\eStoreCase1\eStoreViewModels\bin\Debug\eStoreViewModels.pdb
+C:\GitHub\DRM\eStoreCase1\eStoreViewModels\bin\Debug\eStoreModels.dll
+C:\GitHub\DRM\eStoreCase1\eStoreViewModels\bin\Debug\EntityFramework.dll
+C:\GitHub\DRM\eStoreCase1\eStoreViewModels\bin\Debug\eStoreModels.pdb
+C:\GitHub\DRM\eStoreCase1\eStoreViewModels\bin\Debug\EntityFramework.xml
+C:\GitHub\DRM\eStoreCase1\eStoreViewModels\obj\Debug\DMS_ViewModel.csprojResolveAssemblyReference.cache
+C:\GitHub\DRM\eStoreCase1\eStoreViewModels\obj\Debug\eStoreViewModels.dll
+C:\GitHub\DRM\eStoreCase1\eStoreViewModels\obj\Debug\eStoreViewModels.pdb
+C:\GitHub\DRM\eStoreCase1\DMS_ViewModels\bin\Debug\eStoreViewModels.dll
+C:\GitHub\DRM\eStoreCase1\DMS_ViewModels\bin\Debug\eStoreViewModels.pdb
+C:\GitHub\DRM\eStoreCase1\DMS_ViewModels\bin\Debug\eStoreModels.dll
+C:\GitHub\DRM\eStoreCase1\DMS_ViewModels\bin\Debug\EntityFramework.dll
+C:\GitHub\DRM\eStoreCase1\DMS_ViewModels\bin\Debug\eStoreModels.pdb
+C:\GitHub\DRM\eStoreCase1\DMS_ViewModels\bin\Debug\EntityFramework.xml
+C:\GitHub\DRM\eStoreCase1\DMS_ViewModels\obj\Debug\DMS_ViewModel.csprojResolveAssemblyReference.cache
+C:\GitHub\DRM\eStoreCase1\DMS_ViewModels\obj\Debug\eStoreViewModels.dll
+C:\GitHub\DRM\eStoreCase1\DMS_ViewModels\obj\Debug\eStoreViewModels.pdb
+C:\GitHub\DRM\Daycare Management System\DMS_ViewModels\bin\Debug\DMS_ViewModel.dll
+C:\GitHub\DRM\Daycare Management System\DMS_ViewModels\bin\Debug\DMS_ViewModel.pdb
+C:\GitHub\DRM\Daycare Management System\DMS_ViewModels\bin\Debug\DMS_Model.dll
+C:\GitHub\DRM\Daycare Management System\DMS_ViewModels\bin\Debug\EntityFramework.dll
+C:\GitHub\DRM\Daycare Management System\DMS_ViewModels\bin\Debug\DMS_Model.pdb
+C:\GitHub\DRM\Daycare Management System\DMS_ViewModels\bin\Debug\EntityFramework.xml
+C:\GitHub\DRM\Daycare Management System\DMS_ViewModels\obj\Debug\DMS_ViewModel.csprojResolveAssemblyReference.cache
+C:\GitHub\DRM\Daycare Management System\DMS_ViewModels\obj\Debug\DMS_ViewModel.dll
+C:\GitHub\DRM\Daycare Management System\DMS_ViewModels\obj\Debug\DMS_ViewModel.pdb

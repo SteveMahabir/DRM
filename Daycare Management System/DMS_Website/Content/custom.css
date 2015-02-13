@@ -1,0 +1,51 @@
+﻿html,
+body {
+    height: 100%;
+    /* The html and body lments cannot have any padding or margin. */
+}
+
+#map_canvas {
+    width: 550px;
+    height: 300px;
+    border: solid 3px #333;
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+#banner{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+    min-height: 100%;
+    height: auto;
+    /* Negative indent footer by its height */
+    margin: 0 auto -60px;
+    /* Pad bottom by fotter height */
+    padding: 0 0 60px;
+}
+
+/* Set the fixed height of the footer here */
+#footer {
+    height: 60px;
+    background-color: #000;
+    color: #fff;
+}
+
+.group-list {
+    -moz-column-count: 4;
+    -moz-column-gap: 10px;
+    -webkit-column-count: 4;
+    -webkit-column-gap: 10px;
+    column-count: 4;
+    column-gap: 10px;
+    margin: 10px;
+    margin-top: 50px;
+}
+
+#catalogue ul li:hover{
+    background-color: lightblue;
+}

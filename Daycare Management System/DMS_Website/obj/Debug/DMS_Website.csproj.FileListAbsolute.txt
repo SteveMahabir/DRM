@@ -1,0 +1,195 @@
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\eStoreWebsite.dll.config
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\eStoreWebsite.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\eStoreWebsite.pdb
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\Antlr3.Runtime.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\EntityFramework.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\EntityFramework.SqlServer.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\eStoreViewModels.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.AspNet.Identity.Core.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Security.Cookies.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Security.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Security.Facebook.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Security.Google.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Security.OAuth.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Security.Twitter.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.Web.Infrastructure.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\Newtonsoft.Json.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\Owin.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\System.Net.Http.Formatting.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\System.Web.Helpers.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\System.Web.Http.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\System.Web.Http.WebHost.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\System.Web.Mvc.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\System.Web.Optimization.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\System.Web.Razor.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\System.Web.WebPages.Deployment.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\System.Web.WebPages.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\System.Web.WebPages.Razor.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\WebGrease.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\eStoreModels.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\eStoreViewModels.pdb
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\System.Net.Http.Formatting.xml
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\System.Web.Http.xml
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\System.Web.Http.WebHost.xml
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\System.Web.Helpers.xml
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\System.Web.Mvc.xml
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\System.Web.Optimization.xml
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\System.Web.Razor.xml
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\System.Web.WebPages.xml
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\System.Web.WebPages.Deployment.xml
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\System.Web.WebPages.Razor.xml
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\Newtonsoft.Json.xml
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\Antlr3.Runtime.pdb
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\EntityFramework.xml
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\EntityFramework.SqlServer.xml
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.AspNet.Identity.Core.xml
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.xml
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Security.xml
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Security.Facebook.xml
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Security.Cookies.xml
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Security.OAuth.xml
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Security.Google.xml
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Security.Twitter.xml
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\eStoreModels.pdb
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\obj\Debug\DMS_Website.csprojResolveAssemblyReference.cache
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\obj\Debug\eStoreWebsite.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\obj\Debug\eStoreWebsite.pdb
+C:\GitHub\DRM\eStoreCase1\DMS_Website\bin\eStoreWebsite.dll.config
+C:\GitHub\DRM\eStoreCase1\DMS_Website\bin\eStoreWebsite.dll
+C:\GitHub\DRM\eStoreCase1\DMS_Website\bin\eStoreWebsite.pdb
+C:\GitHub\DRM\eStoreCase1\DMS_Website\bin\Antlr3.Runtime.dll
+C:\GitHub\DRM\eStoreCase1\DMS_Website\bin\EntityFramework.dll
+C:\GitHub\DRM\eStoreCase1\DMS_Website\bin\EntityFramework.SqlServer.dll
+C:\GitHub\DRM\eStoreCase1\DMS_Website\bin\eStoreViewModels.dll
+C:\GitHub\DRM\eStoreCase1\DMS_Website\bin\Microsoft.AspNet.Identity.Core.dll
+C:\GitHub\DRM\eStoreCase1\DMS_Website\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\GitHub\DRM\eStoreCase1\DMS_Website\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\GitHub\DRM\eStoreCase1\DMS_Website\bin\Microsoft.Owin.dll
+C:\GitHub\DRM\eStoreCase1\DMS_Website\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\GitHub\DRM\eStoreCase1\DMS_Website\bin\Microsoft.Owin.Security.Cookies.dll
+C:\GitHub\DRM\eStoreCase1\DMS_Website\bin\Microsoft.Owin.Security.dll
+C:\GitHub\DRM\eStoreCase1\DMS_Website\bin\Microsoft.Owin.Security.Facebook.dll
+C:\GitHub\DRM\eStoreCase1\DMS_Website\bin\Microsoft.Owin.Security.Google.dll
+C:\GitHub\DRM\eStoreCase1\DMS_Website\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\GitHub\DRM\eStoreCase1\DMS_Website\bin\Microsoft.Owin.Security.OAuth.dll
+C:\GitHub\DRM\eStoreCase1\DMS_Website\bin\Microsoft.Owin.Security.Twitter.dll
+C:\GitHub\DRM\eStoreCase1\DMS_Website\bin\Microsoft.Web.Infrastructure.dll
+C:\GitHub\DRM\eStoreCase1\DMS_Website\bin\Newtonsoft.Json.dll
+C:\GitHub\DRM\eStoreCase1\DMS_Website\bin\Owin.dll
+C:\GitHub\DRM\eStoreCase1\DMS_Website\bin\System.Net.Http.Formatting.dll
+C:\GitHub\DRM\eStoreCase1\DMS_Website\bin\System.Web.Helpers.dll
+C:\GitHub\DRM\eStoreCase1\DMS_Website\bin\System.Web.Http.dll
+C:\GitHub\DRM\eStoreCase1\DMS_Website\bin\System.Web.Http.WebHost.dll
+C:\GitHub\DRM\eStoreCase1\DMS_Website\bin\System.Web.Mvc.dll
+C:\GitHub\DRM\eStoreCase1\DMS_Website\bin\System.Web.Optimization.dll
+C:\GitHub\DRM\eStoreCase1\DMS_Website\bin\System.Web.Razor.dll
+C:\GitHub\DRM\eStoreCase1\DMS_Website\bin\System.Web.WebPages.Deployment.dll
+C:\GitHub\DRM\eStoreCase1\DMS_Website\bin\System.Web.WebPages.dll
+C:\GitHub\DRM\eStoreCase1\DMS_Website\bin\System.Web.WebPages.Razor.dll
+C:\GitHub\DRM\eStoreCase1\DMS_Website\bin\WebGrease.dll
+C:\GitHub\DRM\eStoreCase1\DMS_Website\bin\eStoreModels.dll
+C:\GitHub\DRM\eStoreCase1\DMS_Website\bin\eStoreViewModels.pdb
+C:\GitHub\DRM\eStoreCase1\DMS_Website\bin\System.Net.Http.Formatting.xml
+C:\GitHub\DRM\eStoreCase1\DMS_Website\bin\System.Web.Http.xml
+C:\GitHub\DRM\eStoreCase1\DMS_Website\bin\System.Web.Http.WebHost.xml
+C:\GitHub\DRM\eStoreCase1\DMS_Website\bin\System.Web.Helpers.xml
+C:\GitHub\DRM\eStoreCase1\DMS_Website\bin\System.Web.Mvc.xml
+C:\GitHub\DRM\eStoreCase1\DMS_Website\bin\System.Web.Optimization.xml
+C:\GitHub\DRM\eStoreCase1\DMS_Website\bin\System.Web.Razor.xml
+C:\GitHub\DRM\eStoreCase1\DMS_Website\bin\System.Web.WebPages.xml
+C:\GitHub\DRM\eStoreCase1\DMS_Website\bin\System.Web.WebPages.Deployment.xml
+C:\GitHub\DRM\eStoreCase1\DMS_Website\bin\System.Web.WebPages.Razor.xml
+C:\GitHub\DRM\eStoreCase1\DMS_Website\bin\Newtonsoft.Json.xml
+C:\GitHub\DRM\eStoreCase1\DMS_Website\bin\Antlr3.Runtime.pdb
+C:\GitHub\DRM\eStoreCase1\DMS_Website\bin\EntityFramework.xml
+C:\GitHub\DRM\eStoreCase1\DMS_Website\bin\EntityFramework.SqlServer.xml
+C:\GitHub\DRM\eStoreCase1\DMS_Website\bin\Microsoft.AspNet.Identity.Core.xml
+C:\GitHub\DRM\eStoreCase1\DMS_Website\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\GitHub\DRM\eStoreCase1\DMS_Website\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\GitHub\DRM\eStoreCase1\DMS_Website\bin\Microsoft.Owin.xml
+C:\GitHub\DRM\eStoreCase1\DMS_Website\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\GitHub\DRM\eStoreCase1\DMS_Website\bin\Microsoft.Owin.Security.xml
+C:\GitHub\DRM\eStoreCase1\DMS_Website\bin\Microsoft.Owin.Security.Facebook.xml
+C:\GitHub\DRM\eStoreCase1\DMS_Website\bin\Microsoft.Owin.Security.Cookies.xml
+C:\GitHub\DRM\eStoreCase1\DMS_Website\bin\Microsoft.Owin.Security.OAuth.xml
+C:\GitHub\DRM\eStoreCase1\DMS_Website\bin\Microsoft.Owin.Security.Google.xml
+C:\GitHub\DRM\eStoreCase1\DMS_Website\bin\Microsoft.Owin.Security.Twitter.xml
+C:\GitHub\DRM\eStoreCase1\DMS_Website\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\GitHub\DRM\eStoreCase1\DMS_Website\bin\eStoreModels.pdb
+C:\GitHub\DRM\eStoreCase1\DMS_Website\obj\Debug\DMS_Website.csprojResolveAssemblyReference.cache
+C:\GitHub\DRM\eStoreCase1\DMS_Website\obj\Debug\eStoreWebsite.dll
+C:\GitHub\DRM\eStoreCase1\DMS_Website\obj\Debug\eStoreWebsite.pdb
+C:\GitHub\DRM\Daycare Management System\DMS_Website\bin\DMS_Website.dll.config
+C:\GitHub\DRM\Daycare Management System\DMS_Website\bin\DMS_Website.dll
+C:\GitHub\DRM\Daycare Management System\DMS_Website\bin\DMS_Website.pdb
+C:\GitHub\DRM\Daycare Management System\DMS_Website\bin\Antlr3.Runtime.dll
+C:\GitHub\DRM\Daycare Management System\DMS_Website\bin\DMS_ViewModel.dll
+C:\GitHub\DRM\Daycare Management System\DMS_Website\bin\EntityFramework.dll
+C:\GitHub\DRM\Daycare Management System\DMS_Website\bin\EntityFramework.SqlServer.dll
+C:\GitHub\DRM\Daycare Management System\DMS_Website\bin\Microsoft.AspNet.Identity.Core.dll
+C:\GitHub\DRM\Daycare Management System\DMS_Website\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\GitHub\DRM\Daycare Management System\DMS_Website\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\GitHub\DRM\Daycare Management System\DMS_Website\bin\Microsoft.Owin.dll
+C:\GitHub\DRM\Daycare Management System\DMS_Website\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\GitHub\DRM\Daycare Management System\DMS_Website\bin\Microsoft.Owin.Security.Cookies.dll
+C:\GitHub\DRM\Daycare Management System\DMS_Website\bin\Microsoft.Owin.Security.dll
+C:\GitHub\DRM\Daycare Management System\DMS_Website\bin\Microsoft.Owin.Security.Facebook.dll
+C:\GitHub\DRM\Daycare Management System\DMS_Website\bin\Microsoft.Owin.Security.Google.dll
+C:\GitHub\DRM\Daycare Management System\DMS_Website\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\GitHub\DRM\Daycare Management System\DMS_Website\bin\Microsoft.Owin.Security.OAuth.dll
+C:\GitHub\DRM\Daycare Management System\DMS_Website\bin\Microsoft.Owin.Security.Twitter.dll
+C:\GitHub\DRM\Daycare Management System\DMS_Website\bin\Microsoft.Web.Infrastructure.dll
+C:\GitHub\DRM\Daycare Management System\DMS_Website\bin\Newtonsoft.Json.dll
+C:\GitHub\DRM\Daycare Management System\DMS_Website\bin\Owin.dll
+C:\GitHub\DRM\Daycare Management System\DMS_Website\bin\System.Net.Http.Formatting.dll
+C:\GitHub\DRM\Daycare Management System\DMS_Website\bin\System.Web.Helpers.dll
+C:\GitHub\DRM\Daycare Management System\DMS_Website\bin\System.Web.Http.dll
+C:\GitHub\DRM\Daycare Management System\DMS_Website\bin\System.Web.Http.WebHost.dll
+C:\GitHub\DRM\Daycare Management System\DMS_Website\bin\System.Web.Mvc.dll
+C:\GitHub\DRM\Daycare Management System\DMS_Website\bin\System.Web.Optimization.dll
+C:\GitHub\DRM\Daycare Management System\DMS_Website\bin\System.Web.Razor.dll
+C:\GitHub\DRM\Daycare Management System\DMS_Website\bin\System.Web.WebPages.Deployment.dll
+C:\GitHub\DRM\Daycare Management System\DMS_Website\bin\System.Web.WebPages.dll
+C:\GitHub\DRM\Daycare Management System\DMS_Website\bin\System.Web.WebPages.Razor.dll
+C:\GitHub\DRM\Daycare Management System\DMS_Website\bin\WebGrease.dll
+C:\GitHub\DRM\Daycare Management System\DMS_Website\bin\DMS_Model.dll
+C:\GitHub\DRM\Daycare Management System\DMS_Website\bin\DMS_ViewModel.pdb
+C:\GitHub\DRM\Daycare Management System\DMS_Website\bin\System.Net.Http.Formatting.xml
+C:\GitHub\DRM\Daycare Management System\DMS_Website\bin\System.Web.Http.xml
+C:\GitHub\DRM\Daycare Management System\DMS_Website\bin\System.Web.Http.WebHost.xml
+C:\GitHub\DRM\Daycare Management System\DMS_Website\bin\System.Web.Helpers.xml
+C:\GitHub\DRM\Daycare Management System\DMS_Website\bin\System.Web.Mvc.xml
+C:\GitHub\DRM\Daycare Management System\DMS_Website\bin\System.Web.Optimization.xml
+C:\GitHub\DRM\Daycare Management System\DMS_Website\bin\System.Web.Razor.xml
+C:\GitHub\DRM\Daycare Management System\DMS_Website\bin\System.Web.WebPages.xml
+C:\GitHub\DRM\Daycare Management System\DMS_Website\bin\System.Web.WebPages.Deployment.xml
+C:\GitHub\DRM\Daycare Management System\DMS_Website\bin\System.Web.WebPages.Razor.xml
+C:\GitHub\DRM\Daycare Management System\DMS_Website\bin\Newtonsoft.Json.xml
+C:\GitHub\DRM\Daycare Management System\DMS_Website\bin\Antlr3.Runtime.pdb
+C:\GitHub\DRM\Daycare Management System\DMS_Website\bin\EntityFramework.xml
+C:\GitHub\DRM\Daycare Management System\DMS_Website\bin\EntityFramework.SqlServer.xml
+C:\GitHub\DRM\Daycare Management System\DMS_Website\bin\Microsoft.AspNet.Identity.Core.xml
+C:\GitHub\DRM\Daycare Management System\DMS_Website\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\GitHub\DRM\Daycare Management System\DMS_Website\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\GitHub\DRM\Daycare Management System\DMS_Website\bin\Microsoft.Owin.xml
+C:\GitHub\DRM\Daycare Management System\DMS_Website\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\GitHub\DRM\Daycare Management System\DMS_Website\bin\Microsoft.Owin.Security.xml
+C:\GitHub\DRM\Daycare Management System\DMS_Website\bin\Microsoft.Owin.Security.Facebook.xml
+C:\GitHub\DRM\Daycare Management System\DMS_Website\bin\Microsoft.Owin.Security.Cookies.xml
+C:\GitHub\DRM\Daycare Management System\DMS_Website\bin\Microsoft.Owin.Security.OAuth.xml
+C:\GitHub\DRM\Daycare Management System\DMS_Website\bin\Microsoft.Owin.Security.Google.xml
+C:\GitHub\DRM\Daycare Management System\DMS_Website\bin\Microsoft.Owin.Security.Twitter.xml
+C:\GitHub\DRM\Daycare Management System\DMS_Website\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\GitHub\DRM\Daycare Management System\DMS_Website\bin\DMS_Model.pdb
+C:\GitHub\DRM\Daycare Management System\DMS_Website\obj\Debug\DMS_Website.csprojResolveAssemblyReference.cache
+C:\GitHub\DRM\Daycare Management System\DMS_Website\obj\Debug\DMS_Website.dll
+C:\GitHub\DRM\Daycare Management System\DMS_Website\obj\Debug\DMS_Website.pdb

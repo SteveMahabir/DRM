@@ -1,0 +1,64 @@
+﻿body {
+padding-left:20px;
+font-family:Helvetica Neue,Helvetica,Arial,sans-serif;
+font-size:14px;
+}
+
+tr {
+    margin: 1px;
+}
+
+td {
+    border: 1px solid;
+}
+
+#mainTable {
+    border: 3px solid;
+}
+
+.itemSelected {
+    font-weight: bold;
+    color: black;
+    background-color: yellow;
+}
+
+.defItem {
+    margin: 1px;
+    background-color: White;
+}
+
+.dynaTable {
+    position: absolute;
+    left: 250px;
+    width: 340px;
+    border: 4px solid #000;
+    background-color: #fff;
+    padding: 20px;
+    text-align: right;
+}
+
+.greenItem {
+    margin: 1px;
+    background-color: Green;
+}
+
+.tblItemHead {
+    font-weight: bold;
+    font-size: 12px;
+    background-color: silver;
+}
+
+.tblItemBigHead {
+    font-weight: bold;
+    font-size: 15px;
+    text-align: left;
+    color: white;
+    background-color: blue;
+}
+
+.itemData {
+    font-weight: bold;
+    background-color: white;
+}
+
+

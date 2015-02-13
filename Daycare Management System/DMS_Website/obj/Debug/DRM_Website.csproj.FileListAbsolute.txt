@@ -1,0 +1,195 @@
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\bin\eStoreWebsite.dll.config
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\bin\eStoreWebsite.dll
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\bin\eStoreWebsite.pdb
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\bin\Antlr3.Runtime.dll
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\bin\EntityFramework.dll
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\bin\EntityFramework.SqlServer.dll
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\bin\eStoreViewModels.dll
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.dll
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Security.dll
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\bin\Newtonsoft.Json.dll
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\bin\Owin.dll
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\bin\System.Net.Http.Formatting.dll
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\bin\System.Web.Helpers.dll
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\bin\System.Web.Http.dll
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\bin\System.Web.Http.WebHost.dll
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\bin\System.Web.Mvc.dll
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\bin\System.Web.Optimization.dll
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\bin\System.Web.Razor.dll
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\bin\System.Web.WebPages.dll
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\bin\System.Web.WebPages.Razor.dll
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\bin\WebGrease.dll
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\bin\eStoreModels.dll
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\bin\eStoreViewModels.pdb
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\bin\System.Net.Http.Formatting.xml
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\bin\System.Web.Http.xml
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\bin\System.Web.Http.WebHost.xml
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\bin\System.Web.Helpers.xml
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\bin\System.Web.Mvc.xml
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\bin\System.Web.Optimization.xml
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\bin\System.Web.Razor.xml
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\bin\System.Web.WebPages.xml
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\bin\System.Web.WebPages.Razor.xml
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\bin\Newtonsoft.Json.xml
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\bin\Antlr3.Runtime.pdb
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\bin\EntityFramework.xml
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\bin\EntityFramework.SqlServer.xml
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.xml
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Security.xml
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\bin\eStoreModels.pdb
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\obj\Debug\DRM_Website.csprojResolveAssemblyReference.cache
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\obj\Debug\eStoreWebsite.dll
+C:\Users\Steve\Documents\Visual Studio 2013\Projects\INFO-3067 (Asp)\CaseStudy1\Case Study 1 - Lab 10\eStoreCase1\eStoreWebsite\obj\Debug\eStoreWebsite.pdb
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\bin\eStoreWebsite.dll.config
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\bin\eStoreWebsite.dll
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\bin\eStoreWebsite.pdb
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\bin\Antlr3.Runtime.dll
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\bin\EntityFramework.dll
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\bin\EntityFramework.SqlServer.dll
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\bin\eStoreViewModels.dll
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.dll
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Security.dll
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\bin\Newtonsoft.Json.dll
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\bin\Owin.dll
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\bin\System.Net.Http.Formatting.dll
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\bin\System.Web.Helpers.dll
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\bin\System.Web.Http.dll
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\bin\System.Web.Http.WebHost.dll
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\bin\System.Web.Mvc.dll
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\bin\System.Web.Optimization.dll
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\bin\System.Web.Razor.dll
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\bin\System.Web.WebPages.dll
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\bin\System.Web.WebPages.Razor.dll
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\bin\WebGrease.dll
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\bin\eStoreModels.dll
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\bin\eStoreViewModels.pdb
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\bin\System.Net.Http.Formatting.xml
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\bin\System.Web.Http.xml
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\bin\System.Web.Http.WebHost.xml
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\bin\System.Web.Helpers.xml
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\bin\System.Web.Mvc.xml
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\bin\System.Web.Optimization.xml
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\bin\System.Web.Razor.xml
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\bin\System.Web.WebPages.xml
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\bin\System.Web.WebPages.Razor.xml
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\bin\Newtonsoft.Json.xml
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\bin\Antlr3.Runtime.pdb
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\bin\EntityFramework.xml
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\bin\EntityFramework.SqlServer.xml
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.xml
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Security.xml
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\bin\eStoreModels.pdb
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\obj\Debug\DRM_Website.csprojResolveAssemblyReference.cache
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\obj\Debug\eStoreWebsite.dll
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\eStoreCase1\eStoreWebsite\obj\Debug\eStoreWebsite.pdb
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\eStoreWebsite.dll.config
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\eStoreWebsite.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\eStoreWebsite.pdb
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\Antlr3.Runtime.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\EntityFramework.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\EntityFramework.SqlServer.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\eStoreViewModels.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.AspNet.Identity.Core.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Security.Cookies.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Security.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Security.Facebook.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Security.Google.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Security.OAuth.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Security.Twitter.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.Web.Infrastructure.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\Newtonsoft.Json.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\Owin.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\System.Net.Http.Formatting.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\System.Web.Helpers.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\System.Web.Http.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\System.Web.Http.WebHost.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\System.Web.Mvc.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\System.Web.Optimization.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\System.Web.Razor.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\System.Web.WebPages.Deployment.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\System.Web.WebPages.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\System.Web.WebPages.Razor.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\WebGrease.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\eStoreModels.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\eStoreViewModels.pdb
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\System.Net.Http.Formatting.xml
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\System.Web.Http.xml
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\System.Web.Http.WebHost.xml
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\System.Web.Helpers.xml
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\System.Web.Mvc.xml
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\System.Web.Optimization.xml
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\System.Web.Razor.xml
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\System.Web.WebPages.xml
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\System.Web.WebPages.Deployment.xml
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\System.Web.WebPages.Razor.xml
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\Newtonsoft.Json.xml
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\Antlr3.Runtime.pdb
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\EntityFramework.xml
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\EntityFramework.SqlServer.xml
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.AspNet.Identity.Core.xml
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.xml
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Security.xml
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Security.Facebook.xml
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Security.Cookies.xml
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Security.OAuth.xml
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Security.Google.xml
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Security.Twitter.xml
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\bin\eStoreModels.pdb
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\obj\Debug\DRM_Website.csprojResolveAssemblyReference.cache
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\obj\Debug\eStoreWebsite.dll
+C:\GitHub\DRM\eStoreCase1\eStoreWebsite\obj\Debug\eStoreWebsite.pdb
