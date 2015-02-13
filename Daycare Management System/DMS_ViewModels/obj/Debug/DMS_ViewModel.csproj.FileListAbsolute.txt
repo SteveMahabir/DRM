@@ -25,3 +25,12 @@ C:\GitHub\DRM\Daycare Management System\DMS_ViewModels\bin\Debug\EntityFramework
 C:\GitHub\DRM\Daycare Management System\DMS_ViewModels\obj\Debug\DMS_ViewModel.csprojResolveAssemblyReference.cache
 C:\GitHub\DRM\Daycare Management System\DMS_ViewModels\obj\Debug\DMS_ViewModel.dll
 C:\GitHub\DRM\Daycare Management System\DMS_ViewModels\obj\Debug\DMS_ViewModel.pdb
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\Daycare Management System\DMS_ViewModels\bin\Debug\DMS_ViewModel.dll
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\Daycare Management System\DMS_ViewModels\bin\Debug\DMS_ViewModel.pdb
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\Daycare Management System\DMS_ViewModels\bin\Debug\DMS_Model.dll
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\Daycare Management System\DMS_ViewModels\bin\Debug\EntityFramework.dll
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\Daycare Management System\DMS_ViewModels\bin\Debug\DMS_Model.pdb
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\Daycare Management System\DMS_ViewModels\bin\Debug\EntityFramework.xml
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\Daycare Management System\DMS_ViewModels\obj\Debug\DMS_ViewModel.csprojResolveAssemblyReference.cache
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\Daycare Management System\DMS_ViewModels\obj\Debug\DMS_ViewModel.dll
+C:\Users\Nickademus\School\!05 Jan - April\Project\Git\DRM\Daycare Management System\DMS_ViewModels\obj\Debug\DMS_ViewModel.pdb
