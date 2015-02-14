@@ -12,6 +12,38 @@ namespace DMS_ViewModel
 
     public class EmployeeViewModel : DRMViewModelConfig
     {
+        public EmployeeViewModel() { }
+        private EmployeeViewModel(  int employeeid,
+                                    string firstname,
+                                    string lastname,
+                                    string address,
+                                    string city,
+                                    string province,
+                                    string role,
+                                    string phone,
+                                    string username,
+                                    string password,
+                                    string email,
+                                    string repeatpassword,
+                                    string message
+        )
+        {
+            EmployeeID = employeeid;
+            Firstname = firstname;
+            Lastname = lastname;
+            Address = address;
+            City = city;
+            Province = province;
+            Role = role;
+            Phone = phone;
+            Username = username;
+            Password = password;
+            Email = email;
+            RepeatPassword = repeatpassword;
+            Message = message;	
+        }
+
+
         // Data Members
         public int EmployeeID { get; set; }
         
@@ -130,6 +162,33 @@ namespace DMS_ViewModel
                 ErrorRoutine(e, "EmployeeViewModel", "GetCurrentProfile");
                 throw new Exception("Error occured");
             }
+        }
+
+        public List<EmployeeViewModel> GetEmployeeList()
+        {
+            List<EmployeeViewModel> l_evm = new List<EmployeeViewModel>();
+            for (int i = 0; i < 5; i++)
+            {
+                l_evm.Add(new EmployeeViewModel(    i,
+                                                    "Empfirstname" + i,
+                                                    "lastname",
+                                                    "address",
+                                                    "city",
+                                                    "province",
+                                                    "role",
+                                                    "phone",
+                                                    "username",
+                                                    "password",
+                                                    "email",
+                                                    "repeatpassword",
+                                                    "message"
+        ));
+            }
+            return l_evm;
+
+
+
+
         }
     }
 }

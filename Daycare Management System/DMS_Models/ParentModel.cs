@@ -15,7 +15,7 @@ namespace DMS_Model
         /// <returns>Parent number once completed</returns>
         public int Register(byte[] bytParent)
         {
-            int ParentId = -1;
+            int parentId = -1;
             Parent parent = new Parent();
             NeighbourhoodEntities dbContext = new NeighbourhoodEntities();
 
@@ -28,20 +28,20 @@ namespace DMS_Model
                 parent.PFirstName = Convert.ToString(dictionaryParent["firstname"]);
                 parent.PLastName = Convert.ToString(dictionaryParent["lastname"]);
                 parent.Email = Convert.ToString(dictionaryParent["email"]);
-                parent.PAddress = Convert.ToString(dictionaryParent["address1"]);
+                parent.PAddress = Convert.ToString(dictionaryParent["address"]);
                 parent.PCity = Convert.ToString(dictionaryParent["city"]);
                 //parent.PPostal = Convert.ToString(dictionaryParent["postal"]);
                 parent.PProvince = Convert.ToString(dictionaryParent["province"]);
                 parent.PPhone = Convert.ToString(dictionaryParent["phone"]);
                 dbContext.Parents.Add(parent);
                 dbContext.SaveChanges();
-                ParentId = parent.ParentId;
+                parentId = parent.ParentId;
             }
             catch (Exception ex)
             {
                 ErrorRoutine(ex, "ParentModel", "Register");
             }
-            return ParentId;
+            return parentId;
         }
 
         /// <summary>

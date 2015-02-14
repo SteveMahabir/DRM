@@ -183,6 +183,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\ParentHelper.cs" />
+    <Compile Include="Helpers\EmployeeHelper.cs" />
+    <Compile Include="Helpers\MyChildHelper.cs" />
+    <Compile Include="Helpers\ChildHelper.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -252,10 +256,12 @@
     <Content Include="Views\MyChild\Index.cshtml" />
     <Content Include="Views\Employee\PopupMessage.cshtml" />
     <Content Include="Views\Child\PopupMessage.cshtml" />
+    <Content Include="Views\MyChild\PopupMessage.cshtml" />
+    <Content Include="Views\MyInfo\PopupMessage.cshtml" />
+    <Content Include="Views\Parent\PopupMessage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Helpers\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

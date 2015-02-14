@@ -12,6 +12,34 @@ namespace DMS_ViewModel
 
     public class ParentViewModel : DRMViewModelConfig
     {
+
+        public ParentViewModel() { }
+        private ParentViewModel(int parentid,
+                                string firstname,
+                                string lastname,
+                                string address,
+                                string city,
+                                string province,
+                                string phone,
+                                string username,
+                                string password,
+                                string email,
+                                string repeatpassword)
+        {
+            ParentID = parentid;
+            Firstname = firstname;
+            Lastname = lastname;
+            Address = address;
+            City = city;
+            Province = province;
+            Phone = phone;
+            Username = username;
+            Password = password;
+            Email = email;
+            RepeatPassword = repeatpassword;		
+        }
+
+
         // Data Members
         public int ParentID { get; set; }
         
@@ -127,5 +155,32 @@ namespace DMS_ViewModel
                 throw new Exception("Error occured");
             }
         }
+
+        public List<ParentViewModel> GetParentList()
+        {
+            List<ParentViewModel> l_pvm = new List<ParentViewModel>();
+            for (int i = 0; i < 5; i++)
+            {
+                l_pvm.Add(new ParentViewModel(i,
+                                                "Parentfirstname" + i,
+                                                "lastname",
+                                                "address",
+                                                "city",
+                                                "province",
+                                                "phone",
+                                                "username",
+                                                "password",
+                                                "email",
+                                                "repeatpassword"
+        ));
+            }
+            return l_pvm;
+
+
+
+
+        }
+
+
     }
 }

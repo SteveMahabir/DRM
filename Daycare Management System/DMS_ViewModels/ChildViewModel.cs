@@ -12,6 +12,36 @@ namespace DMS_ViewModel
 
     public class ChildViewModel : DRMViewModelConfig
     {
+        public ChildViewModel() { }
+        private ChildViewModel( int childid,
+                                string firstname,
+                                string lastname,
+                                DateTime dob,
+                                string address,
+                                string city,
+                                string province,
+                                int healthcard,
+                                string docname,
+                                string docphone,
+                                string comments,
+                                int parentid,
+                                string message)		
+        {
+            ChildID = childid;
+            Firstname = firstname;
+            Lastname = lastname;
+            DoB = dob;
+            Address = address;
+            City = city;
+            Province = province;
+            HealthCard = healthcard;
+            DocName = docname;
+            DocPhone = docphone;
+            Comments = comments;
+            ParentId = parentid;
+            Message = message;
+        }
+
         // Data Members
         public int ChildID { get; set; }
         
@@ -130,6 +160,28 @@ namespace DMS_ViewModel
                 ErrorRoutine(e, "ChildViewModel", "GetCurrentProfile");
                 throw new Exception("Error occured");
             }
+        }
+        
+        public List<ChildViewModel> GetChildList() { 
+            List<ChildViewModel> l_cvm = new List<ChildViewModel>();
+            for (int i = 0; i < 5; i++)
+            {
+                l_cvm.Add(new ChildViewModel(
+                       1,
+                       "ChildFirst" + i,
+                       "ChildLast" + i,
+                       DateTime.Now,
+                       i + "82 delatre St",
+                       "London",
+                       "ON",
+                       123456789,
+                       "Dr. Baby",
+                       "519-285-2502",
+                       "Comment " + i,
+                       1,
+                       "Kid smells"));
+            }
+            return l_cvm;
         }
     }
 }

@@ -1,8 +1,183 @@
-﻿
+﻿@using DMS_Website.Helpers
 @{
     ViewBag.Title = "My Child";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    @model DMS_ViewModel.ChildViewModel
 }
 
 <h2>My Child</h2>
+<a href="~/Child#child_register_popup" data-toggle="modal">Click here to register your child</a>
+@*child Registering Popup Modal*@
+<div class="modal" id="child_register_popup">
+    <script type="text/javascript">
+        var onSuccess = function (result) {
+            if (result.url) {
+                // if the server returned a JSON object containing an url
+                // properly we redirect the browser to that url
+                window.location.href = result.url;
+            }
+        }
+    </script>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                <div style="font-size: x-large; padding-bottom: 20px; text-align: center;">
+                    Please Register!
+                </div>
+                <div class="row text-center">
+                    <img src="~/Content/Pictures/Banner.jpg" alt="Surfboards" height="100" style="padding-left: 20px" class="banner">
+                </div>
+            </div>
+            @using (
+                    Ajax.BeginForm("Register_Child", "MyChild", new AjaxOptions
+                    {
+                        LoadingElementId = "ajaxSplash",
+                        InsertionMode = InsertionMode.Replace,
+                        HttpMethod = "POST",
+                        UpdateTargetId = "messgReg",
+                        OnSuccess = "onSuccess"
+                    }))
+            {
+                @Html.AntiForgeryToken()
+                //Modal Body
+                <div class="modal-body">
+                    <div class="tabbable" id="myTabs">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#personal" data-toggle="tab">Personal</a></li>
+                            <li><a href="#info" data-toggle="tab">Address</a></li>
+                            <li><a href="#account" data-toggle="tab">Health Info</a></li>
+                        </ul>
+                        @*All Tabs for Modal*@
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="personal">
+                                @Html.Label("First Name")
+                                @Html.TextBoxFor(model => model.Firstname, new { @class = "form-control", @style = "width:75%;" })
+                                @Html.ValidationMessageFor(model => model.Firstname, null, new { @class = "errmsg" })
+                                <br />
+                                @Html.Label("Last Name")
+                                @Html.TextBoxFor(model => model.Lastname, new { @class = "form-control", @style = "width:75%;" })
+                                @Html.ValidationMessageFor(model => model.Lastname, null, new { @class = "errmsg" })
+                                <br />
+                                @*@Html.Label("Date of Birth:")
+                                    @Html.TextBoxFor(model => model.Age, new { @class = "form-control", @style = "width:75%;" })
+                                    @Html.ValidationMessageFor(model => model.Age, null, new { @class = "errmsg" })
+                                    <br />*@
 
+                            </div>
+                            <div class="tab-pane" id="info">
+                                @Html.Label("# and Street:")
+                                @Html.TextBoxFor(model => model.Address, new { @class = "form-control", @style = "width:75%;" })
+                                @Html.ValidationMessageFor(model => model.Address, null, new { @class = "errmsg" })
+                                <br />
+                                @Html.Label("City:")
+                                @Html.TextBoxFor(model => model.City, new { @class = "form-control", @style = "width:75%;" })
+                                @Html.ValidationMessageFor(model => model.City, null, new { @class = "errmsg" })
+                                <br />
+                                @Html.Label("Province:")
+                                @Html.TextBoxFor(model => model.Province, new { @class = "form-control", @style = "width:75%;" })
+                                @Html.ValidationMessageFor(model => model.Province, null, new { @class = "errmsg" })
+                                <br />
+
+
+                                @*
+                                    @Html.Label("Postal Code:")
+                                    @Html.TextBoxFor(model => model.postal, new { @class = "form-control", @style = "width:75%;" })
+                                    @Html.ValidationMessageFor(model => model.postal, null, new { @class = "errmsg" })*@
+                            </div>
+                            <div class="tab-pane" id="account">
+                                @Html.Label("Health Card #:")
+                                @Html.TextBoxFor(model => model.HealthCard, new { @class = "form-control", @style = "width:75%;" })
+                                @Html.ValidationMessageFor(model => model.HealthCard, null, new { @class = "errmsg" })
+                                <br />
+                                @Html.Label("Doctor Name:")
+                                @Html.TextBoxFor(model => model.DocName, new { @class = "form-control", @style = "width:75%;" })
+                                @Html.ValidationMessageFor(model => model.DocName, null, new { @class = "errmsg" })
+                                <br />
+                                @Html.Label("Doctor Phone #:")
+                                @Html.TextBoxFor(model => model.DocPhone, new { @class = "form-control", @style = "width:75%;" })
+                                @Html.ValidationMessageFor(model => model.DocPhone, null, new { @class = "errmsg" })
+                                <br />
+                                <input type="submit" class="btn btn-primary pull-left" value="Register!" />
+                                <div id="ajaxSplash" style="display: none; z-index: 60;">Registering Parent ! Please Wait...</div>
+                                <br />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <br /><br />
+                    <div id="messgReg">@Html.Partial("PopupMessage")</div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+
+
+<div id="catalogue">
+    @Html.myChildren("mycat")
+</div>
+
+@*Details Popup (Modal)*@
+<div class="modal" id="detail_popup">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                @*Header of Modal*@
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                <div style="font-size: x-large; padding-bottom: 20px; text-align: center;">
+                    Child Information
+                </div>
+                <div class="row text-center">
+                    <img src="~/Content/Pictures/Banner.jpg" alt="Surfboards" height="100" style="padding-left: 20px" class="banner">
+                </div>
+            </div>      
+                <div class="modal-body">
+                                        <div id="content-body" style=" column-count: 2; -moz-column-count: 2; -webkit-column-count: 2;">
+                        <div class="details-left" style="float: left;">
+                            <div id="detailsProdName" class="h1"></div>
+                            <img id="detailsGraphic" />
+                            <br />
+                            <br />
+                        </div>
+                        <div class="details-right" style="text-align: center; float: left;">
+                            <br />
+                            <div id="detailsDescr"></div>
+                        </div>
+                    </div>
+                    <div id="content-footer" style=" column-count: 2; -moz-column-count: 2; -webkit-column-count: 2;">
+                        <div>
+                            <br />
+                            <label>Price: </label>
+                            <label id="detailsPrice"></label>
+                            <br />
+                            <label>Quantity:</label>
+                            <input type="number" min="0" id="qty" name="qty" style="width: auto" />
+                            <div id="messg2"></div>
+                        </div>
+                        <div>
+                            <br />
+                            <input type="submit" class="btn btn-primary pull-left" value="Add!" />
+                            <input type="submit" value=" View Cart " class="btn btn-primary" style="margin-left: 5px;" onclick="$(location).attr('href', 'ViewCart')" />
+                            <br />
+                            <br />
+                        </div>
+                    </div>
+                </div>
+
+                //Footer of Modal
+                <div class="modal-footer">
+                    <br /><br />
+                    <div id="messg2">@Html.Partial("PopupMessage")</div>
+                    @Html.Hidden("detailsProdcd");
+                    <div id="ajaxSplash" style="display: none; z-index: 60;">Loading...</div>
+
+                </div>
+
+            }
+        </div>
+    </div>
+</div>

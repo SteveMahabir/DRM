@@ -49,21 +49,22 @@ namespace DMS_Website.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Login(CustomerViewModel model, string returnUrl)
+        public async Task<ActionResult> Login(ParentViewModel model, string returnUrl)
         {
             var user = await UserManager.FindAsync(model.Username, model.Password);
             if (user != null)
             {
                 await SignInAsync(user, false);
                 model.GetCurrentProfile();
-                Session["CustomerID"] = model.CustomerID;
+                Session["ParentID"] = model.ParentID;
                 Session["Message"] = "Welcome " + model.Username;
                 Session["loggedIn"] = true;
                 Session["LoginStatus"] = "Thank you for logging in, You are currently logged in as : " + model.Username;
-                Session["customer"] = model;
+                Session["parent"] = model;
                 Session["Email"] = model.Email;
                 Session["FullName"] = model.Firstname + " " + model.Lastname;
-                ViewBag.custID = model.CustomerID;
+                Session["userType"] = "parent";
+                ViewBag.custID = model.ParentID;
                 return Json(new {url=Url.Action("")}, JsonRequestBehavior.AllowGet);
             }
             else
@@ -94,14 +95,14 @@ namespace DMS_Website.Controllers
         /// <returns></returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Register(CustomerViewModel model, string returnUrl)
+        public async Task<ActionResult> Register(ParentViewModel model, string returnUrl)
         {
             if (ModelState.IsValid)
             {
                 try
                 {
                     model.Register();
-                    if(model.CustomerID > 0)
+                    if(model.ParentID > 0)
                     {
                         var user = new ApplicationUser() { UserName = model.Username };
                         var result = await UserManager.CreateAsync(user, model.Password);
@@ -113,9 +114,9 @@ namespace DMS_Website.Controllers
 
 
                         //TO DO: This will eventually send a confirmation email
-                        //if (result.Succeeded)
-                        //{
-                        //    ViewBag.Message = model.Message + ". Please proceed to login";
+                        if (result.Succeeded)
+                        {
+                            ViewBag.Message = model.Message + ". Please proceed to login";
                         //    #region Send-Mail
                         //    MailMessage msg = new MailMessage();
                         //    msg.Subject = "New Registration";
@@ -129,12 +130,12 @@ namespace DMS_Website.Controllers
                         //        mailClient.Send(msg);
                         //    }
                         //    #endregion
-                        //}
-                        //else
-                        //{
-                        //    int rowsDelete = model.Delete(); // something went wrong with ASPNet.Identity get rid of our customer
-                        //    ViewBag.Message = "Problem Registering, " + result.Errors.ElementAt(0) + " try again!";
-                        //}
+                        }
+                        else
+                        {
+                            int rowsDelete = model.Delete(); // something went wrong with ASPNet.Identity get rid of our customer
+                            ViewBag.Message = "Problem Registering, " + result.Errors.ElementAt(0) + " try again!";
+                        }
                     }
                     else
                     {

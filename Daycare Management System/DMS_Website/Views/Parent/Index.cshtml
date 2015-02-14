@@ -1,8 +1,12 @@
-﻿
+﻿@using DMS_Website.Helpers
 @{
     ViewBag.Title = "Parents";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    @model DMS_ViewModel.ParentViewModel
 }
 
 <h2>Parent</h2>
 
+<div id="catalogue">
+    @Html.parents("mycat")
+</div>
