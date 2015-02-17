@@ -68,6 +68,7 @@
     <Compile Include="Child.cs">
       <DependentUpon>Neighbourhood.tt</DependentUpon>
     </Compile>
+    <Compile Include="ChildModel.cs" />
     <Compile Include="Class.cs">
       <DependentUpon>Neighbourhood.tt</DependentUpon>
     </Compile>
@@ -83,6 +84,7 @@
       <DependentUpon>Neighbourhood.tt</DependentUpon>
     </Compile>
     <Compile Include="DRM_ModelConfig.cs" />
+    <Compile Include="EmployeeModel.cs" />
     <Compile Include="Neighbourhood.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -101,6 +103,7 @@
     <Compile Include="Parent.cs">
       <DependentUpon>Neighbourhood.tt</DependentUpon>
     </Compile>
+    <Compile Include="ParentModel.cs" />
     <Compile Include="pGetThreeClosestBranches_Result.cs">
       <DependentUpon>Neighbourhood.tt</DependentUpon>
     </Compile>
