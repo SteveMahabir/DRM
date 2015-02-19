@@ -83,5 +83,21 @@ namespace DMS_Model
                 throw new Exception(e.Message);
             }
         }
+
+        public List<Parent> GetAll()
+        {
+            NeighbourhoodEntities dbContext;
+            List<Parent> parrins = null;
+            try
+            {
+                dbContext = new NeighbourhoodEntities();
+                parrins = dbContext.Parents.ToList();
+            }
+            catch (Exception ex)
+            {
+                ErrorRoutine(ex, "ProductModel", "GetAll");
+            }
+            return parrins;
+        }
     }
 }

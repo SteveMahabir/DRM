@@ -84,5 +84,21 @@ namespace DMS_Model
                 throw new Exception(e.Message);
             }
         }
+
+        public List<Employee> GetAll()
+        {
+            NeighbourhoodEntities dbContext;
+            List<Employee> empies = null;
+            try
+            {
+                dbContext = new NeighbourhoodEntities();
+                empies = dbContext.Employees.ToList();
+            }
+            catch (Exception ex)
+            {
+                ErrorRoutine(ex, "ProductModel", "GetAll");
+            }
+            return empies;
+        }
     }
 }

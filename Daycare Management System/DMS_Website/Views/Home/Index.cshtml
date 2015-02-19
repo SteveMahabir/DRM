@@ -183,11 +183,12 @@
                         @Html.Label("Password:")
                         @Html.PasswordFor(model => model.Password, new { @class = "form-control", @style = "max-width: none;" })
                         @Html.ValidationMessageFor(model => model.Password, null, new { @class = "errmsg" })
-                        <br />
                         <div id="ajaxSplash" style="display: none; z-index: 60;">Logging In! Please Wait...</div>
-                        <input type="submit" class="btn btn-primary pull-left" value="Login!" />
+                        <input type="submit" class="btn btn-primary pull-left" value="Login!" style="margin:5px;" />
                     </div>
                                     <div class="modal-footer">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><a href="~/Home#login_emp_popup" data-toggle="modal">Employee Login</a></button>
+                                        
                                         <br /><br />
                                         <div id="Log">@Html.Partial("PopupMessage")</div>
                                     </div>
@@ -195,6 +196,62 @@
                             </div>
                         </div>
                     </div>
+    
+
+    @*Employee Modal for Logging In*@
+    <div class="modal" id="login_emp_popup">
+        <script type="text/javascript">
+            var onSuccess = function (result) {
+                if (result.url) {
+                    // if the server returned a JSON object containing an url
+                    // properly we redirect the browser to that url
+                    window.location.href = result.url;
+                }
+            }
+        </script>
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    @*Header of Modal*@
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                    <div style="font-size: x-large; padding-bottom: 20px; text-align: center;">
+                        Employee Login
+                    </div>
+                </div>
+                @using (
+                    Ajax.BeginForm("Login_emp", "home", new AjaxOptions
+                    {
+                        LoadingElementId = "ajaxSplash",
+                        InsertionMode = InsertionMode.Replace,
+                        HttpMethod = "POST",
+                        UpdateTargetId = "Log",
+                        OnSuccess = "onSuccess"
+                    }))
+                {
+                    @Html.AntiForgeryToken()
+                    //Body of Modal
+                    <div class="modal-body">
+                        @Html.Label("Username:")
+                        @Html.TextBoxFor(model => model.Username, new { @class = "form-control", @style = "max-width: none;" })
+                        @Html.ValidationMessageFor(model => model.Username, null, new { @class = "errmsg" })
+                        <br />
+                        @Html.Label("Password:")
+                        @Html.PasswordFor(model => model.Password, new { @class = "form-control", @style = "max-width: none;" })
+                        @Html.ValidationMessageFor(model => model.Password, null, new { @class = "errmsg" })
+                        <div id="ajaxSplash" style="display: none; z-index: 60;">Logging In! Please Wait...</div>
+                        <input type="submit" class="btn btn-primary pull-left" value="Login!" style="margin:5px;" />
+                    </div>
+                    <div class="modal-footer">
+                        <br /><br />
+                        <div id="Log">@Html.Partial("PopupMessage")</div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+
+
 
             </body>
 

@@ -166,25 +166,29 @@ namespace DMS_ViewModel
 
         public List<EmployeeViewModel> GetEmployeeList()
         {
-            List<EmployeeViewModel> l_evm = new List<EmployeeViewModel>();
-            for (int i = 0; i < 5; i++)
+            List<EmployeeViewModel> empies = new List<EmployeeViewModel>();
+            try
             {
-                l_evm.Add(new EmployeeViewModel(    i,
-                                                    "Empfirstname" + i,
-                                                    "lastname",
-                                                    "address",
-                                                    "city",
-                                                    "province",
-                                                    "role",
-                                                    "phone",
-                                                    "username",
-                                                    "password",
-                                                    "email",
-                                                    "repeatpassword",
-                                                    "message"
-        ));
+                EmployeeModel pm = new EmployeeModel();
+                List<Employee> pList = pm.GetAll();
+
+                //We return ProductViewModel instances as the ASP layer has no knowledge of EF
+                foreach (Employee e in pList)
+                {
+                    EmployeeViewModel evm = new EmployeeViewModel();
+                    evm.Firstname = e.EFirstName;
+                    evm.Lastname = e.ELastName;
+                    evm.EmployeeID = (int)e.EmployeeId;
+                    empies.Add(evm);//add to the list
+                }
+
             }
-            return l_evm;
+            catch (Exception ex)
+            {
+
+                ErrorRoutine(ex, "ProductViewModel", "GetAll");
+            }
+            return empies;
 
 
 

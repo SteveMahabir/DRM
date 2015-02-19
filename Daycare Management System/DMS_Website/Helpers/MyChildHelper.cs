@@ -14,7 +14,10 @@ namespace DMS_Website.Helpers
             var builder = new TagBuilder("ul class='group-list'");
             StringBuilder innerHtml = new StringBuilder();
             ChildViewModel cvm = new ChildViewModel();
-            List<ChildViewModel> l_cvm = cvm.GetChildList();
+
+            HttpContext context = HttpContext.Current;
+            
+            List<ChildViewModel> l_cvm = cvm.GetChildList( context.Session["ParentID"] );
             builder.GenerateId(id);
             foreach (var item in l_cvm)
             {

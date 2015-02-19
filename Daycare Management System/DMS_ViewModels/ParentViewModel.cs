@@ -77,6 +77,8 @@ namespace DMS_ViewModel
         
         public string Message { get; set; }
 
+
+
         /// <summary>
         /// Registers a Member for the site
         /// </summary>
@@ -158,29 +160,39 @@ namespace DMS_ViewModel
 
         public List<ParentViewModel> GetParentList()
         {
-            List<ParentViewModel> l_pvm = new List<ParentViewModel>();
-            for (int i = 0; i < 5; i++)
+            List<ParentViewModel> parrins = new List<ParentViewModel>();
+            try
             {
-                l_pvm.Add(new ParentViewModel(i,
-                                                "Parentfirstname" + i,
-                                                "lastname",
-                                                "address",
-                                                "city",
-                                                "province",
-                                                "phone",
-                                                "username",
-                                                "password",
-                                                "email",
-                                                "repeatpassword"
-        ));
+                ParentModel pm = new ParentModel();
+                List<Parent> pList = pm.GetAll();
+
+                //We return ProductViewModel instances as the ASP layer has no knowledge of EF
+                foreach (Parent p in pList)
+                {
+                    ParentViewModel pvm = new ParentViewModel();
+                    pvm.Firstname = p.PFirstName;
+                    pvm.Lastname = p.PLastName;
+                    pvm.ParentID = (int)p.ParentId;
+                    parrins.Add(pvm);//add to the list
+                }
+
             }
-            return l_pvm;
+            catch (Exception ex)
+            {
 
-
+                ErrorRoutine(ex, "ProductViewModel", "GetAll");
+            }
+            return parrins;
 
 
         }
 
+
+        public override string ToString()
+        {
+            string res = "First Name: " + Firstname + "Last Name: " + Lastname;
+            return res;
+        }
 
     }
 }

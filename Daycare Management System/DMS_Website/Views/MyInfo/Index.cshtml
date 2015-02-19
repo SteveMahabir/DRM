@@ -1,8 +1,11 @@
-﻿
+﻿@using DMS_ViewModel;
 @{
     ViewBag.Title = "My Information";
     Layout = "~/Views/Shared/_Layout.cshtml";
+
 }
+    
 
 <h2>MyInfo</h2>
 
+@Session["parent"].ToString()

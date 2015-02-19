@@ -51,6 +51,7 @@ namespace DMS_Website.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Login(ParentViewModel model, string returnUrl)
         {
+            
             var user = await UserManager.FindAsync(model.Username, model.Password);
             if (user != null)
             {
@@ -66,6 +67,40 @@ namespace DMS_Website.Controllers
                 Session["userType"] = "parent";
                 ViewBag.custID = model.ParentID;
                 return Json(new {url=Url.Action("")}, JsonRequestBehavior.AllowGet);
+            }
+            else
+            {
+                ViewBag.Message = "login failed - try again";
+                return PartialView("PopupMessage");
+            }
+        }
+
+        /// <summary>
+        /// Login - Checks the database for user and populates session
+        /// </summary>
+        /// <param name="model">Customer Model for hitting the database</param>
+        /// <param name="returnUrl">Returns the next pages url</param>
+        /// <returns></returns>
+        [HttpPost]
+        [AllowAnonymous]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> Login_emp(EmployeeViewModel model, string returnUrl)
+        {
+            var user = await UserManager.FindAsync(model.Username, model.Password);
+            if (user != null)
+            {
+                await SignInAsync(user, false);
+                model.GetCurrentProfile();
+                Session["EmployeeID"] = model.EmployeeID;
+                Session["Message"] = "Welcome " + model.Username;
+                Session["loggedIn"] = true;
+                Session["LoginStatus"] = "Thank you for logging in, You are currently logged in as : " + model.Username;
+                Session["parent"] = model;
+                Session["Email"] = model.Email;
+                Session["FullName"] = model.Firstname + " " + model.Lastname;
+                Session["userType"] = model.Role;
+                ViewBag.custID = model.EmployeeID;
+                return Json(new { url = Url.Action("") }, JsonRequestBehavior.AllowGet);
             }
             else
             {

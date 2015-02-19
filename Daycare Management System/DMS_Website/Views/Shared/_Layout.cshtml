@@ -3,7 +3,7 @@
     if (Session["loggedIn"] == null)
     {
         Session["loggedIn"] = false;
-
+        
     }
     bool logged_in = (bool)Session["loggedIn"];
 }
@@ -43,19 +43,19 @@
                     <li><a href="~/Home#parent_register_popup" data-toggle="modal">Register</a></li>
                     <li><a href="~/Home#login_popup" data-toggle="modal">Login</a></li>
                 }
-                else if ( Session["userType"] == "parent" )//Parent
+                else if ( Session["userType"].Equals("parent") )//Parent
                 {
                     <li id="lgOtMnuItem"><a href="javascript:document.getElementById('logoutForm').submit()">Log Out</a></li>
                     <li><a href="~/MyChild">My Child</a></li>
                     <li><a href="~/MyInfo">My Information</a></li>
                 }
-                else if (false)//employee
+                else if (Session["userType"].Equals("employee") )//employee
                 {
                     <li id="lgOtMnuItem"><a href="javascript:document.getElementById('logoutForm').submit()">Log Out</a></li>
                     <li><a href="~/Child">Child</a></li>
                     <li><a href="~/Parent">Parent</a></li>
                 }
-                else if (false)//manager
+                else if ( Session["userType"].Equals("manager"))//manager
                 {
                     <li id="lgOtMnuItem"><a href="javascript:document.getElementById('logoutForm').submit()">Log Out</a></li>
                     <li><a href="~/Child">Children</a></li>

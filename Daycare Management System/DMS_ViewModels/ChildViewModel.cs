@@ -7,6 +7,7 @@ using DMS_Model;
 using System.ComponentModel.DataAnnotations;
 using DMS_ViewModel;
 
+
 namespace DMS_ViewModel
 {
 
@@ -73,7 +74,7 @@ namespace DMS_ViewModel
         [Required(ErrorMessage = "Doctors Phone number is required.")]
         public string DocPhone { get; set; }
 
-        [Required(ErrorMessage = "Comments are required.")]
+        //[Required(ErrorMessage = "Comments are required.")]
         public string Comments { get; set; }
 
         public int ParentId { get; set; }
@@ -83,8 +84,9 @@ namespace DMS_ViewModel
         /// <summary>
         /// Registers a Member for the site
         /// </summary>
-        public void Register()
+        public void Register( object pid )
         {
+            ParentId = (int)pid;
             Dictionary<string, Object> dictionaryChild = new Dictionary<string, Object>();
             try
             {
@@ -95,7 +97,7 @@ namespace DMS_ViewModel
                 dictionaryChild["address"] = Address;
                 dictionaryChild["city"] = City;
                 dictionaryChild["province"] = Province;
-                dictionaryChild["HealthCard"] = HealthCard;
+                dictionaryChild["healthcard"] = HealthCard;
                 dictionaryChild["docname"] = DocName;
                 dictionaryChild["docphone"] = DocPhone;
                 dictionaryChild["comments"] = Comments;
@@ -162,26 +164,61 @@ namespace DMS_ViewModel
             }
         }
         
-        public List<ChildViewModel> GetChildList() { 
-            List<ChildViewModel> l_cvm = new List<ChildViewModel>();
-            for (int i = 0; i < 5; i++)
+        public List<ChildViewModel> GetChildList( object pid ) {
+            List<ChildViewModel> chillins = new List<ChildViewModel>();
+            try
             {
-                l_cvm.Add(new ChildViewModel(
-                       1,
-                       "ChildFirst" + i,
-                       "ChildLast" + i,
-                       DateTime.Now,
-                       i + "82 delatre St",
-                       "London",
-                       "ON",
-                       123456789,
-                       "Dr. Baby",
-                       "519-285-2502",
-                       "Comment " + i,
-                       1,
-                       "Kid smells"));
+                ChildModel cm = new ChildModel();
+                List<Child> childList = cm.GetAll((int)pid);
+
+                //We return ProductViewModel instances as the ASP layer has no knowledge of EF
+                foreach (Child c in childList)
+                {
+                    ChildViewModel cvm = new ChildViewModel();
+                    cvm.Firstname = c.FirstName;
+                    cvm.Lastname = c.LastName;
+                    cvm.ParentId = (int)c.ParentId;
+                    cvm.DocName = c.DocName;
+                    cvm.DocPhone = c.DocPhone;
+                    chillins.Add(cvm);//add to the list
+                }
             }
-            return l_cvm;
+            catch (Exception ex)
+            {
+
+                ErrorRoutine(ex, "ProductViewModel", "GetAll");
+            }
+            return chillins;
+        }
+
+        public List<ChildViewModel> GetChildList()
+        {
+            List<ChildViewModel> chillins = new List<ChildViewModel>();
+            try
+            {
+
+                ChildModel cm = new ChildModel();
+                List<Child> childList = cm.GetAll();
+
+                //We return ProductViewModel instances as the ASP layer has no knowledge of EF
+                foreach (Child c in childList)
+                {
+                    ChildViewModel cvm = new ChildViewModel();
+                    cvm.Firstname = c.FirstName;
+                    cvm.Lastname = c.LastName;
+                    cvm.ParentId = (int)c.ParentId;
+                    cvm.DocName = c.DocName;
+                    cvm.DocPhone = c.DocPhone;
+                    chillins.Add(cvm);//add to the list
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                ErrorRoutine(ex, "ProductViewModel", "GetAll");
+            }
+            return chillins;
         }
     }
 }
