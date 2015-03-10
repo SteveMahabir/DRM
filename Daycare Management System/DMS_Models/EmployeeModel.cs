@@ -17,12 +17,12 @@ namespace DMS_Model
         {
             int empId = -1;
             Employee emp = new Employee();
-            NeighbourhoodEntities dbContext = new NeighbourhoodEntities();
+            NeighbourhoodDataEntities dbContext = new NeighbourhoodDataEntities();
 
             try
             {
                 Dictionary<string, Object> dictionaryEmployee = (Dictionary<string, Object>)Deserializer(bytEmployee);
-                dbContext = new NeighbourhoodEntities();
+                dbContext = new NeighbourhoodDataEntities();
                 emp.userName = Convert.ToString(dictionaryEmployee["username"]);
                 emp.Password = Convert.ToString(dictionaryEmployee["password"]);
                 emp.EFirstName = Convert.ToString(dictionaryEmployee["firstname"]);
@@ -55,7 +55,7 @@ namespace DMS_Model
             Employee emp = new Employee();
             try
             {
-                NeighbourhoodEntities dbContext = new NeighbourhoodEntities();
+                NeighbourhoodDataEntities dbContext = new NeighbourhoodDataEntities();
                 emp = dbContext.Employees.FirstOrDefault(c => c.userName == username);
             }
             catch(Exception e)
@@ -74,7 +74,7 @@ namespace DMS_Model
             Employee emp = new Employee();
             try
             {
-                NeighbourhoodEntities dbContext = new NeighbourhoodEntities();
+                NeighbourhoodDataEntities dbContext = new NeighbourhoodDataEntities();
                 emp = dbContext.Employees.FirstOrDefault(c => c.EmployeeId == employeeId);
                 dbContext.Employees.Remove(emp);
                 dbContext.SaveChanges();
@@ -87,11 +87,11 @@ namespace DMS_Model
 
         public List<Employee> GetAll()
         {
-            NeighbourhoodEntities dbContext;
+            NeighbourhoodDataEntities dbContext;
             List<Employee> empies = null;
             try
             {
-                dbContext = new NeighbourhoodEntities();
+                dbContext = new NeighbourhoodDataEntities();
                 empies = dbContext.Employees.ToList();
             }
             catch (Exception ex)

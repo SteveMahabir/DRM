@@ -17,12 +17,12 @@ namespace DMS_Model
         {
             int parentId = -1;
             Parent parent = new Parent();
-            NeighbourhoodEntities dbContext = new NeighbourhoodEntities();
+            NeighbourhoodDataEntities dbContext = new NeighbourhoodDataEntities();
 
             try
             {
                 Dictionary<string, Object> dictionaryParent = (Dictionary<string, Object>)Deserializer(bytParent);
-                dbContext = new NeighbourhoodEntities();
+                dbContext = new NeighbourhoodDataEntities();
                 parent.userName = Convert.ToString(dictionaryParent["username"]);
                 parent.Password = Convert.ToString(dictionaryParent["password"]);
                 parent.PFirstName = Convert.ToString(dictionaryParent["firstname"]);
@@ -54,7 +54,7 @@ namespace DMS_Model
             Parent parent = new Parent();
             try
             {
-                NeighbourhoodEntities dbContext = new NeighbourhoodEntities();
+                NeighbourhoodDataEntities dbContext = new NeighbourhoodDataEntities();
                 parent = dbContext.Parents.FirstOrDefault(c => c.userName == username);
             }
             catch(Exception e)
@@ -73,7 +73,7 @@ namespace DMS_Model
             Parent parent = new Parent();
             try
             {
-                NeighbourhoodEntities dbContext = new NeighbourhoodEntities();
+                NeighbourhoodDataEntities dbContext = new NeighbourhoodDataEntities();
                 parent = dbContext.Parents.FirstOrDefault(c => c.ParentId == ParentId);
                 dbContext.Parents.Remove(parent);
                 dbContext.SaveChanges();
@@ -86,11 +86,11 @@ namespace DMS_Model
 
         public List<Parent> GetAll()
         {
-            NeighbourhoodEntities dbContext;
+            NeighbourhoodDataEntities dbContext;
             List<Parent> parrins = null;
             try
             {
-                dbContext = new NeighbourhoodEntities();
+                dbContext = new NeighbourhoodDataEntities();
                 parrins = dbContext.Parents.ToList();
             }
             catch (Exception ex)

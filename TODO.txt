@@ -1,0 +1,8 @@
+DMS TODO/BUG List
+
+1.	Messages issued during regestration/login
+
+	the messages issued at the boittom of the model that indicates a successfull longin/registration or that an error has occured
+
+2.	Information from clicking on a child or parent model is empty - needs to pull from the DB/object list information
+

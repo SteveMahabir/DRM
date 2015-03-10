@@ -15,10 +15,10 @@ namespace DMS_Model
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class NeighbourhoodEntities : DbContext
+    public partial class NeighbourhoodDataEntities : DbContext
     {
-        public NeighbourhoodEntities()
-            : base("name=NeighbourhoodEntities")
+        public NeighbourhoodDataEntities()
+            : base("name=NeighbourhoodDataEntities")
         {
         }
     

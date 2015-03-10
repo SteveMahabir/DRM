@@ -17,12 +17,12 @@ namespace DMS_Model
         {
             int Id = -1;
             Child child = new Child();
-            NeighbourhoodEntities dbContext = new NeighbourhoodEntities();
+            NeighbourhoodDataEntities dbContext = new NeighbourhoodDataEntities();
 
             try
             {
                 Dictionary<string, Object> dictionaryChild = (Dictionary<string, Object>)Deserializer(bytChild);
-                dbContext = new NeighbourhoodEntities();
+                dbContext = new NeighbourhoodDataEntities();
                 child.FirstName = Convert.ToString(dictionaryChild["firstname"]);
                 child.LastName = Convert.ToString(dictionaryChild["lastname"]);
                 //child.DoB = Convert.ToDateTime(dictionaryChild["dob"]);
@@ -56,7 +56,7 @@ namespace DMS_Model
             Child child = new Child();
             try
             {
-                NeighbourhoodEntities dbContext = new NeighbourhoodEntities();
+                NeighbourhoodDataEntities dbContext = new NeighbourhoodDataEntities();
                 child = dbContext.Children.FirstOrDefault(c => c.Id == Id);
             }
             catch(Exception e)
@@ -75,7 +75,7 @@ namespace DMS_Model
             Child child = new Child();
             try
             {
-                NeighbourhoodEntities dbContext = new NeighbourhoodEntities();
+                NeighbourhoodDataEntities dbContext = new NeighbourhoodDataEntities();
                 child = dbContext.Children.FirstOrDefault(c => c.Id == childId);
                 dbContext.Children.Remove(child);
                 dbContext.SaveChanges();
@@ -88,11 +88,11 @@ namespace DMS_Model
 
         public List<Child> GetAll()
         {            
-            NeighbourhoodEntities dbContext;
+            NeighbourhoodDataEntities dbContext;
             List<Child> chillins = null;
             try
             {
-                dbContext = new NeighbourhoodEntities();
+                dbContext = new NeighbourhoodDataEntities();
                 chillins = dbContext.Children.ToList();
             }
             catch (Exception ex)
@@ -104,11 +104,11 @@ namespace DMS_Model
 
         public List<Child> GetAll(int PID)
         {
-            NeighbourhoodEntities dbContext;
+            NeighbourhoodDataEntities dbContext;
             List<Child> chillins = null;
             try
             {
-                dbContext = new NeighbourhoodEntities();
+                dbContext = new NeighbourhoodDataEntities();
                 chillins = dbContext.Children.Where( c => c.ParentId == PID ).ToList();
             }
             catch (Exception ex)

@@ -17,12 +17,12 @@ namespace DMS_Model
         {
             int custId = -1;
             Customer cust = new Customer();
-            NeighbourhoodEntities dbContext = new NeighbourhoodEntities();
+            NeighbourhoodDataEntities dbContext = new NeighbourhoodDataEntities();
 
             try
             {
                 Dictionary<string, Object> dictionaryCustomer = (Dictionary<string, Object>)Deserializer(bytParent);
-                dbContext = new NeighbourhoodEntities();
+                dbContext = new NeighbourhoodDataEntities();
                 cust.Username = Convert.ToString(dictionaryCustomer["username"]);
                 cust.FirstName = Convert.ToString(dictionaryCustomer["firstname"]);
                 cust.LastName = Convert.ToString(dictionaryCustomer["lastname"]);
@@ -55,7 +55,7 @@ namespace DMS_Model
             Customer cust = new Customer();
             try
             {
-                NeighbourhoodEntities dbContext = new NeighbourhoodEntities();
+                NeighbourhoodDataEntities dbContext = new NeighbourhoodDataEntities();
                 cust = dbContext.Customers.FirstOrDefault(c => c.Username == username);
             }
             catch(Exception e)
@@ -74,7 +74,7 @@ namespace DMS_Model
             Customer cust = new Customer();
             try
             {
-                NeighbourhoodEntities dbContext = new NeighbourhoodEntities();
+                NeighbourhoodDataEntities dbContext = new NeighbourhoodDataEntities();
                 cust = dbContext.Customers.FirstOrDefault(c => c.CustomerID == customerId);
                 dbContext.Customers.Remove(cust);
                 dbContext.SaveChanges();

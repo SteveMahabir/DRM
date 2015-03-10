@@ -15,12 +15,12 @@ namespace DMS_Model
         /// <returns>List of details of 3 closet branches</returns>
         public List<CloseBranchDetails> GetClosetBranches(Dictionary<string, object> dictionaryAddresses)
         {
-            NeighbourhoodEntities dbContext;
+            NeighbourhoodDataEntities dbContext;
             List<CloseBranchDetails> branchDetails = new List<CloseBranchDetails>();
 
             try
             {
-                dbContext = new NeighbourhoodEntities();
+                dbContext = new NeighbourhoodDataEntities();
                 float? latitude = Convert.ToSingle(dictionaryAddresses["lat"]);
                 float? longitude = Convert.ToSingle(dictionaryAddresses["long"]);
 
