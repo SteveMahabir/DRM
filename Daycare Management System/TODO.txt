@@ -6,3 +6,16 @@ DMS TODO/BUG List
 
 2.	Information from clicking on a child or parent model is empty - needs to pull from the DB/object list information
 
+
+
+
+Sprint 2
+
+1.	Database hits working
+2.	View parent/child information
+3.	get to work on all comps
+4.  Email?
+
+
+
+
