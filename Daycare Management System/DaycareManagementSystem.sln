@@ -1,13 +1,18 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMS_Model", "DMS_Models\DMS_Model.csproj", "{F7317FC0-E4F1-4386-A1DC-D873DE97993E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMS_ViewModel", "DMS_ViewModels\DMS_ViewModel.csproj", "{1EA608B9-AE46-4246-9F29-02CB0F1FCBBD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMS_Website", "DMS_Website\DMS_Website.csproj", "{325D1DCD-5976-4F9B-A751-DECF65C2279F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FECF23D8-17A0-4F5A-9443-B8561107EFF3}"
+	ProjectSection(SolutionItems) = preProject
+		TODO.txt = TODO.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
