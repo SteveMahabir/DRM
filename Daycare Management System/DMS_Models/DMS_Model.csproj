@@ -49,86 +49,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AspNetRole.cs">
-      <DependentUpon>Neighbourhood.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AspNetUser.cs">
-      <DependentUpon>Neighbourhood.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AspNetUserClaim.cs">
-      <DependentUpon>Neighbourhood.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AspNetUserLogin.cs">
-      <DependentUpon>Neighbourhood.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Branch.cs">
-      <DependentUpon>Neighbourhood.tt</DependentUpon>
-    </Compile>
     <Compile Include="BranchModel.cs" />
-    <Compile Include="Child.cs">
-      <DependentUpon>Neighbourhood.tt</DependentUpon>
-    </Compile>
     <Compile Include="ChildModel.cs" />
-    <Compile Include="Class.cs">
-      <DependentUpon>Neighbourhood.tt</DependentUpon>
-    </Compile>
     <Compile Include="CloseBranchDetails.cs" />
-    <Compile Include="Customer.cs">
-      <DependentUpon>Neighbourhood.tt</DependentUpon>
-    </Compile>
     <Compile Include="CustomerModel.cs" />
-    <Compile Include="C__MigrationHistory.cs">
-      <DependentUpon>Neighbourhood.tt</DependentUpon>
-    </Compile>
     <Compile Include="DRM_ModelConfig.cs" />
-    <Compile Include="Employee.cs">
-      <DependentUpon>Neighbourhood.tt</DependentUpon>
-    </Compile>
     <Compile Include="EmployeeModel.cs" />
-    <Compile Include="Neighbourhood.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Neighbourhood.Context.tt</DependentUpon>
-    </Compile>
     <Compile Include="Neighbourhood.cs" />
-    <Compile Include="Neighbourhood.Designer.cs">
-      <DependentUpon>Neighbourhood.edmx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Neighbourhood1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Neighbourhood.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Parent.cs">
-      <DependentUpon>Neighbourhood.tt</DependentUpon>
-    </Compile>
     <Compile Include="ParentModel.cs" />
-    <Compile Include="pGetThreeClosestBranches_Result.cs">
-      <DependentUpon>Neighbourhood.tt</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="Neighbourhood.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Neighbourhood.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="App.Config" />
-    <None Include="Neighbourhood.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Neighbourhood.edmx</DependentUpon>
-      <LastGenOutput>Neighbourhood.Context.cs</LastGenOutput>
-    </None>
-    <None Include="Neighbourhood.edmx.diagram">
-      <DependentUpon>Neighbourhood.edmx</DependentUpon>
-    </None>
-    <None Include="Neighbourhood.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Neighbourhood.edmx</DependentUpon>
-      <LastGenOutput>Neighbourhood1.cs</LastGenOutput>
-    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
